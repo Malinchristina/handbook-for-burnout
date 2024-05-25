@@ -6,4 +6,3 @@ We understand that when one is experiencing burnout, even simple tasks like goog
 
 To foster a sense of community and ensure a safe, interactive space, users must register and log in to comment, rate, and contribute their own tips and suggestions. This collaborative feature encourages meaningful engagement and connection among members who understand the journey of overcoming burnout.
 
-Whether you're looking for soothing meditations, gentle activities to regain energy, or insightful podcasts to uplift your spirit, Handbok for Burnout is your go-to resource for reclaiming balance and well-being. Join us and take the first step towards recovery with a community that cares. Share your own experiences and tips, and help others on their path to wellness.
