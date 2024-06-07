@@ -11,10 +11,19 @@ To foster a sense of community and ensure a safe, interactive space, users must 
 
 - [Project Planning](#project-planning)
     - [Wireframes](#wireframes)
+    -  [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
+    - [Agile Methodologies ](#agile-methodologies)
+        * [Epics](#epics)
+        * [User stories](#user-stories)
+        * [MoSCoW prioritization](#moscow-prioritization)
+        * [Kanban board](#kanban-board)
+    
 
 ## Project planning
 
 ### Wireframes
+
+Balsamiq was used to create detailed visual representations of the app's design. These wireframes helped in planning the layout and user interface, ensuring a user-friendly experience.
 
 #### Mobile
 
@@ -31,3 +40,19 @@ To foster a sense of community and ensure a safe, interactive space, users must 
 ![Index](documentation/readme_photos/tablet.png)
 
 ![Activity](documentation/readme_photos/tablet_activity.png)
+
+### Database Schema - Entity Relationship Diagram
+
+The database schema for the application is illustrated using an Entity Relationship Diagram (ERD). [Lucidchart](https://www.lucidchart.com/) was used to design the ERD, providing a clear visual representation of the database structure. This diagram outlines the relationships between different entities in the system, ensuring efficient data organization and retrieval. The ERD served as a crucial tool in planning the database, allowing for a streamlined development process and robust data management.
+
+![Entity Relationship Diagram ERD](documentation/readme_photos/erd.png)
+
+### Agile Methodologies
+
+#### Epics
+
+#### User stories
+
+#### MoSCoW prioritization
+
+### Kanban board
