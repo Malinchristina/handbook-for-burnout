@@ -8,15 +8,32 @@ We understand that when one is experiencing burnout, even simple tasks like goog
 To foster a sense of community and ensure a safe, interactive space, users must register and log in to comment, rate, and contribute their own tips and suggestions. This collaborative feature encourages meaningful engagement and connection among members who understand the journey of overcoming burnout.
 
 ## Table of Contents
-
+- [Introduction](#introduction)
+- [UX](#ux)
+- [Design](#design)
+- [Features](#features)
+    * [Future Features](#future-features)
 - [Project Planning](#project-planning)
-    - [Wireframes](#wireframes)
-    -  [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
+    * [Wireframes](#wireframes)
+    *  [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
     - [Agile Methodologies ](#agile-methodologies)
         * [Epics](#epics)
         * [User stories](#user-stories)
         * [MoSCoW prioritization](#moscow-prioritization)
         * [Kanban board](#kanban-board)
+    - [Technologies Used](#technologies-used)
+        * [Languages](#languages)
+        * [Frameworks](#frameworks)
+        * [Libraries](#libraries)
+        * [Tools \& Programs](#tools--programs)
+- [Testing](#testing)
+- [Deployment](#deployment)
+    * [GitHub](#github)
+    * [Heroku](#heroku)
+- [Credits](#credits)
+    * [Code](#code)
+    * [Media](#media)
+    * [Acknowledgements](#acknowledgements)
     
 
 ## Project planning
@@ -55,4 +72,32 @@ The database schema for the application is illustrated using an Entity Relations
 
 #### MoSCoW prioritization
 
-### Kanban board
+#### Kanban board
+
+### Technologies Used
+
+#### Languages
+
+#### Frameworks
+
+#### Libraries
+
+#### Tools & Programs
+
+### Testing
+
+### Deployment
+
+#### GitHub
+
+#### Heroku
+
+### Features
+
+### Credits
+
+#### Code
+
+#### Media
+
+#### Acknowledgements
