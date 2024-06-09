@@ -16,6 +16,7 @@ To foster a sense of community and ensure a safe, interactive space, users must 
 - [Project Planning](#project-planning)
     * [Wireframes](#wireframes)
     *  [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
+        - [Models](Models)
     - [Agile Methodologies ](#agile-methodologies)
         * [Epics](#epics)
         * [User stories](#user-stories)
@@ -63,6 +64,25 @@ Balsamiq was used to create detailed visual representations of the app's design.
 The database schema for the application is illustrated using an Entity Relationship Diagram (ERD). [Lucidchart](https://www.lucidchart.com/) was used to design the ERD, providing a clear visual representation of the database structure. This diagram outlines the relationships between different entities in the system, ensuring efficient data organization and retrieval. The ERD served as a crucial tool in planning the database, allowing for a streamlined development process and robust data management.
 
 ![Entity Relationship Diagram ERD](documentation/readme_photos/erd.png)
+
+### Models
+
+#### AddCategory model
+
+**The AddCategory model** is used to categorize various entries in the application. It contains the following fields:
+
+- category_id: Auto-incremented primary key.
+- category_name: Name of the category (e.g., Routines, Podcasts, Indoor activities, Outdoor activities).
+- user: Foreign key linking to the user who created the category.
+ -created_on: Date and time when the category was created.
+
+The predefined categories are:
+- Routines
+- Podcasts
+- Indoor activities
+- Outdoor activities
+
+These categories can only be added by the admin user in the admin panel to ensure all activities are categorized correctly.
 
 ### Agile Methodologies
 
