@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 
 # Create your models here.
 class AddCategory(models.Model):
@@ -10,3 +11,11 @@ class AddCategory(models.Model):
 
     def __str__(self):
         return self.category_name
+
+    def save(self, *args, **kwargs):
+    # Check if a category with the same name already exists
+        if AddCategory.objects.filter(category_name=self.category_name).exists():
+            raise ValidationError('A category with this name already exists.')
+        
+        # If no duplicate category found, call the parent class's save method
+        super().save(*args, **kwargs)
