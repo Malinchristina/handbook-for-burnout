@@ -24,7 +24,7 @@ class AddCategoryAdmin(admin.ModelAdmin):
         # Override the response after adding a new category
         if '_continue' not in request.POST:
             # Redirect to the category list page if not continuing
-            return HttpResponseRedirect('/admin/app_name/addcategory/')
+            return HttpResponseRedirect('/admin/categories/addcategory/')
         else:
             # Continue editing the category if requested
             return super().response_add(request, obj, post_url_continue)
