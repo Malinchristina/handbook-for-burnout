@@ -28,3 +28,7 @@ class AddCategoryAdmin(admin.ModelAdmin):
         else:
             # Continue editing the category if requested
             return super().response_add(request, obj, post_url_continue)
+    
+    def response_change(self, request, obj):
+        # Redirect to the change list view after saving
+        return HttpResponseRedirect('/admin/categories/addcategory/')
