@@ -1,16 +1,16 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from . import views
-from django.urls import path
+from django.contrib.auth.decorators import login_required
 from .models import AddCategory
 from .forms import CategoryForm
-from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def categories(request):
-    return HttpResponse('This is the categories app')
-
+# View to list categories
+def category_list(request):
+    categories = AddCategory.objects.all()
+    return render(request, 'categories/categories.html', {'categories': categories})
+    
+# View to add a new category (with authentication check)
 @login_required
 def add_category(request):
     if not request.user.is_staff:

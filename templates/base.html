@@ -24,7 +24,12 @@
 <body>
     {% include 'includes/header.html' %}
 
-    <h1>Handbook for burnout</h1>
+    <!-- Placeholder for the child template content -->
+    <div class="container">
+        {% block content %}
+        <!-- Default content (if any) can go here -->
+        {% endblock %}
+    </div>
 
     {% include 'includes/footer.html' %}
 

@@ -4,7 +4,7 @@
   <h1>Categories</h1>
   <ul>
     {% for category in categories %}
-      <li><a href="{% url 'category' category.id %}">{{ category.name }}</a></li>
+      <li>{{ category.category_name }}</li>
     {% endfor %}
   </ul>
 {% endblock %}
