@@ -22,6 +22,6 @@
     {% endfor %}
   </ul>
   {% if not user.is_authenticated %}
-    <p>Do you want to <a href="{% url 'account_login' %}">log in</a>?</p>
+    <p>The content on each category can only be viewed if you are logged in. Do you want to <a href="{% url 'account_login' %}">log in</a>?</p>
   {% endif %}
 {% endblock %}
