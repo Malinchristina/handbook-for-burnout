@@ -4,7 +4,24 @@
   <h1>Categories</h1>
   <ul>
     {% for category in categories %}
-      <li>{{ category.category_name }}</li>
+      {% if user.is_authenticated %}
+        {% if category.category_name == 'Routines' %}
+          <li><a href="{% url 'routines' %}">{{ category.category_name }}</a></li>
+        {% elif category.category_name == 'Podcasts' %}
+          <li><a href="{% url 'podcasts' %}">{{ category.category_name }}</a></li>
+        {% elif category.category_name == 'Indoor activities' %}
+          <li><a href="{% url 'indoor-activities' %}">{{ category.category_name }}</a></li>
+        {% elif category.category_name == 'Outdoor activities' %}
+          <li><a href="{% url 'outdoor-activities' %}">{{ category.category_name }}</a></li>
+        {% else %}
+          <li>{{ category.category_name }}</a></li>
+        {% endif %}
+      {% else %}
+        <li>{{ category.category_name }}</li>
+      {% endif %}
     {% endfor %}
   </ul>
+  {% if not user.is_authenticated %}
+    <p>Do you want to <a href="{% url 'account_login' %}">log in</a>?</p>
+  {% endif %}
 {% endblock %}
