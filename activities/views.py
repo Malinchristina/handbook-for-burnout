@@ -15,7 +15,7 @@ def add_activity(request):
             activity.author = request.user
             activity.save()
             messages.success(request, 'The activity was successfully added.')
-            return redirect('add_activity') 
+            return redirect('categories/categories.html') 
     else:
         form = AddActivityForm()
     return render(request, 'activities/add_activity.html', {'form': form})
