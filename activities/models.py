@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
-LEVEL = ((0, "Level 1"), (1, "Level 2"), (2, "Level 3"),)
+LEVEL = ((0, "All levels"), (1, "Level 1"), (2, "Level 2"), (3, "Level 3"),)
 
 # Create your models here.
 
