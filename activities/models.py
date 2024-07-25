@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
+LEVEL = ((0, "Level 1"), (1, "Level 2"), (2, "Level 3"),)
+
 # Create your models here.
 
 class AddActivity(models.Model):
@@ -9,6 +11,7 @@ class AddActivity(models.Model):
     activity_name = models.CharField(max_length=100)
     description = models.CharField(max_length=300)
     category = models.ForeignKey('categories.AddCategory', on_delete=models.CASCADE)
+    level= models.IntegerField(choices=LEVEL,)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     url_link = models.URLField(max_length=200, blank=True)
