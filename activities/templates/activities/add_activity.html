@@ -1,10 +1,24 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <h2>Add New Activity</h2>
-<form method="post">
+
+{% if messages %}
+    <div class="alert alert-success">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+{% endif %}
+
+<form method="post" id="myForm">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Save Activity</button>
 </form>
+{% endblock %}
+
+{% block extra_head %}
+    <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

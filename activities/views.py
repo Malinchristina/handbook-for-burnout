@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib import messages
 from .forms import AddActivityForm
 from .models import AddActivity
 from categories.models import AddCategory
