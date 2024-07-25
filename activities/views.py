@@ -16,7 +16,7 @@ def add_activity(request):
             return redirect('activities') 
     else:
         form = AddActivityForm()
-    return render(request, 'add_activity.html', {'form': form})
+    return render(request, 'activities/add_activity.html', {'form': form})
 
 
 def routines_view(request):
