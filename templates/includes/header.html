@@ -3,6 +3,7 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
+{% url 'add_activity' as add_activity_url %}
 
 <header>
   <nav class="navbar navbar-expand-lg bg-light">
@@ -23,6 +24,11 @@
             <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
           {% if user.is_authenticated %}
+            {% if user.is_staff or user.is_superuser %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ add_activity_url }}">Add Activity</a>
+              </li>
+            {% endif %}
           <li class="nav-item">
             <a class="nav-link {% if request.path == '/accounts/logout/' %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
           </li>
