@@ -9,7 +9,7 @@ LEVEL = ((0, "Level 1"), (1, "Level 2"), (2, "Level 3"),)
 class AddActivity(models.Model):
     activity_id = models.AutoField(primary_key=True)
     activity_name = models.CharField(max_length=100)
-    description = models.CharField(max_length=300)
+    description = models.TextField()
     category = models.ForeignKey('categories.AddCategory', on_delete=models.CASCADE)
     level= models.IntegerField(choices=LEVEL,)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
