@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     # My apps
     'categories',
     'home',
+    'activities',
 ]
 
 SITE_ID = 1
