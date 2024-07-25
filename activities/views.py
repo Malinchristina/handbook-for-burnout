@@ -13,7 +13,8 @@ def add_activity(request):
             activity = form.save(commit=False)
             activity.author = request.user
             activity.save()
-            return redirect('add_activitiy') 
+            messages.success(request, 'The activity was successfully added.')
+            return redirect('add_activity') 
     else:
         form = AddActivityForm()
     return render(request, 'activities/add_activity.html', {'form': form})
