@@ -8,4 +8,21 @@
     Establishing and maintaining routines can be instrumental in aiding recovery from burnout. 
     Here are some key areas to focus on.
   </p>
+
+  <ul>
+    {% for activity in activities %}
+      <li>
+        <h2>{{ activity.activitiy_name }}</h2> 
+        <p>{{ activity.description }}</p> 
+        <p><strong>Category:</strong> {{ category_name }}</p>
+        <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
+      </li>
+    {% empty %}
+      <li>No routines found.</li>
+    {% endfor %}
+  </ul>
+
+  <input class="btn-iconic mt-3" type="button" id="back-one-page"
+  value="Previous page" onClick="javascript:history.go(-1);">
+
 {% endblock %}
