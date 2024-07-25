@@ -26,18 +26,3 @@ def add_category(request):
         form = CategoryForm()
     return render(request, 'add_category.html', {'form': form})
 
-# Views for the categories
-def routines_view(request):
-    return render(request, 'categories/routines.html')
-
-
-def podcasts_view(request):
-    return render(request, 'categories/podcasts.html')
-
-
-def indoor_activities_view(request):
-    return render(request, 'categories/indoor_activities.html')
-
-
-def outdoor_activities_view(request):
-    return render(request, 'categories/outdoor_activities.html')
