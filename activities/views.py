@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .forms import AddActivityForm
 from .models import AddActivity
+from categories.models import AddCategory
 
 @login_required
 @user_passes_test(lambda u: u.is_staff)
@@ -17,7 +18,23 @@ def add_activity(request):
         form = AddActivityForm()
     return render(request, 'add_activity.html', {'form': form})
 
-def activities(request):
-    # Query all activities from the database
-    activities_list = AddActivity.objects.all()
-    return render(request, 'activities.html', {'activities': activities_list})
+
+def routines_view(request):
+    category = get_object_or_404(AddCategory, category_name='Routines')
+    activities = AddActivity.objects.filter(category=category)
+    return render(request, 'activities/routines.html', {'activities': activities, 'category_name': category.category_name})
+
+def podcasts_view(request):
+    category = get_object_or_404(AddCategory, category_name='Podcasts')
+    activities = AddActivity.objects.filter(category=category)
+    return render(request, 'activities/podcasts.html', {'activities': activities, 'category_name': category.category_name})
+
+def indoor_activities_view(request):
+    category = get_object_or_404(AddCategory, category_name='Indoor activities')
+    activities = AddActivity.objects.filter(category=category)
+    return render(request, 'activities/indoor_activities.html', {'activities': activities, 'category_name': category.category_name})
+
+def outdoor_activities_view(request):
+    category = get_object_or_404(AddCategory, category_name='Outdoor activities')
+    activities = AddActivity.objects.filter(category=category)
+    return render(request, 'activities/outdoor_activities.html', {'activities': activities, 'category_name': category.category_name})
