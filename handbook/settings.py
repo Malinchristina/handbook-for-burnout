@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'categories',
     'home',
     'activities',
+    'reviews',
 ]
 
 SITE_ID = 1
