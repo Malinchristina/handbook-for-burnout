@@ -7,7 +7,7 @@
   <ul>
     {% for activity in activities %}
       <li>
-        <h2>{{ activity.activitiy_name }}</h2> 
+        <h3>{{ activity.activity_name }}</h3>
         <p>{{ activity.description }}</p> 
         <p><strong>Category:</strong> {{ category_name }}</p>
         <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
