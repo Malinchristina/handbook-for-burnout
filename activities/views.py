@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .forms import AddActivityForm
 from .models import AddActivity
 from categories.models import AddCategory
@@ -19,6 +20,18 @@ def add_activity(request):
     else:
         form = AddActivityForm()
     return render(request, 'activities/add_activity.html', {'form': form})
+
+def edit_activity(request, pk):
+    activity = get_object_or_404(AddActivity, pk=pk)
+    if request.method == 'POST':
+        form = AddActivityForm(request.POST, instance=activity)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'The activity was successfully updated.')
+            return redirect('categories')
+    else:
+        form = AddActivityForm(instance=activity)
+    return render(request, 'activities/edit_activity.html', {'form': form})
 
 
 def routines_view(request):
