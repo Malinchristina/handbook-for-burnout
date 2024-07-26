@@ -8,7 +8,10 @@
     {% for activity in activities %}
       <li>
         <h3>{{ activity.activity_name }}</h3>
-        <p>{{ activity.description }}</p> 
+        <p>{{ activity.description }}</p>
+        {% if activity.url_link %}
+          <p><a href="{{ activity.url_link }}" target="_blank">{{ activity.url_link }}</a></p> 
+        {% endif %}  
         <p><strong>Category:</strong> {{ category_name }}</p>
         <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
       </li>
