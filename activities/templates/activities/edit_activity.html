@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h2>Add New Activity</h2>
+<h2>Edit Activity</h2>
 
 {% if messages %}
     <div class="alert alert-success">
@@ -12,10 +12,9 @@
         {% endfor %}
     </div>
 {% endif %}
-
 <form method="post" id="myForm">
     {% csrf_token %}
-    {{ form.as_p }}
+    {{ form|crispy }}
     <button type="submit" class="btn btn-primary">Save Activity</button>
 </form>
 {% endblock %}
