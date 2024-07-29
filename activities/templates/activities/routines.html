@@ -1,7 +1,10 @@
-{% extends "base.html" %}
+{% extends "activities/base_activities.html" %}
 {% load static %}
 
-{% block content %}
+{% block page_specific_content %}
+  <!-- This should only display if you specifically want it here -->
+  <p>Page Specific Content: {{ page_specific_content }}</p>
+  
   <h1>Routines</h1>
   <p>When the nervous system is in a constant state of stress, it can lead to burnout. 
     This condition occurs when we continuously ignore the body's signals to slow down and rest. 
@@ -9,64 +12,4 @@
     Establishing and maintaining routines can be instrumental in aiding recovery from burnout. 
     Here are some key areas to focus on.
   </p>
-
-  <ul>
-    {% for activity in activities %}
-      <li>
-        <h3>{{ activity.activity_name }}</h3> 
-        <p>{{ activity.description }}</p>
-        {% if activity.url_link %}
-          <p><a href="{{ activity.url_link }}" target="_blank">{{ activity.url_link }}</a></p> 
-        {% endif %} 
-        <p><strong>Category:</strong> {{ category_name }}</p>
-        <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
-        {% if user.is_authenticated and user.is_staff %}
-        <p>
-          <button class="btn btn-primary" data-edit-url="{% url 'edit_activity' activity.pk %}" onclick="ToEditActivity(this)">Edit</button>
-        </p>
-        <p>
-          <button class="btn btn-danger" data-delete-url="{% url 'delete_activity' activity.pk %}" onclick="ToDeleteActivity(this)">Delete</button>
-        </p>
-        {% endif %}
-      </li>
-    {% empty %}
-      <li>No routines found.</li>
-    {% endfor %}
-  </ul>
-
-  <!-- Delete confirmation modal, taken from Django walkthrough -->
-  <div class="modal fade" id="deleteModal" tabindex="-1"
-    aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"
-            id="deleteModalLabel">Delete activity?</h5>
-          <button type="button" class="btn-close"
-            data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Are you sure you want to delete this activity?
-          This action cannot be undone.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary"
-            data-bs-dismiss="modal">Close</button>
-          <a id="deleteConfirm" href="#" class="btn
-            btn-danger">Delete</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <input class="btn btn-primary" type="button" id="back-one-page"
-  value="Previous page" onClick="javascript:history.go(-1);">
-
 {% endblock %}
-
-{% block extras %}
-  <script src="{% static 'js/activities.js' %}"></script>
-{% endblock %}
-
-
-
