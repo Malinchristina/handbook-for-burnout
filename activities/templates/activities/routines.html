@@ -21,6 +21,7 @@
         <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
         {% if user.is_authenticated and user.is_staff %}
           <p><a href="{% url 'edit_activity' activity.pk %}">Edit</a></p>
+          <p><a href="{% url 'delete_activity' activity.pk %}">Delete</a></p>
         {% endif %}
       </li>
     {% empty %}

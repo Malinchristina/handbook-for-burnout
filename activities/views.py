@@ -34,6 +34,13 @@ def edit_activity(request, pk):
     return render(request, 'activities/edit_activity.html', {'form': form})
 
 
+def delete_activity(request, pk):
+    activity = get_object_or_404(AddActivity, pk=pk)
+    activity.delete()
+    messages.success(request, 'The activity was successfully deleted.')
+    return redirect('categories')
+
+
 def routines_view(request):
     category = get_object_or_404(AddCategory, category_name='Routines')
     activities = AddActivity.objects.filter(category=category)
