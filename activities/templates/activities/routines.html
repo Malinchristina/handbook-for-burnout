@@ -1,6 +1,10 @@
-{% extends "base.html" %}
+{% extends "activities/base_activities.html" %}
+{% load static %}
 
-{% block content %}
+{% block page_specific_content %}
+  <!-- This should only display if you specifically want it here -->
+  <p>Page Specific Content: {{ page_specific_content }}</p>
+  
   <h1>Routines</h1>
   <p>When the nervous system is in a constant state of stress, it can lead to burnout. 
     This condition occurs when we continuously ignore the body's signals to slow down and rest. 
@@ -8,27 +12,4 @@
     Establishing and maintaining routines can be instrumental in aiding recovery from burnout. 
     Here are some key areas to focus on.
   </p>
-
-  <ul>
-    {% for activity in activities %}
-      <li>
-        <h3>{{ activity.activity_name }}</h3> 
-        <p>{{ activity.description }}</p>
-        {% if activity.url_link %}
-          <p><a href="{{ activity.url_link }}" target="_blank">{{ activity.url_link }}</a></p> 
-        {% endif %} 
-        <p><strong>Category:</strong> {{ category_name }}</p>
-        <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
-        {% if user.is_authenticated and user.is_staff %}
-          <p><a href="{% url 'edit_activity' activity.pk %}">Edit</a></p>
-        {% endif %}
-      </li>
-    {% empty %}
-      <li>No routines found.</li>
-    {% endfor %}
-  </ul>
-
-  <input class="btn-iconic mt-3" type="button" id="back-one-page"
-  value="Previous page" onClick="javascript:history.go(-1);">
-
 {% endblock %}
