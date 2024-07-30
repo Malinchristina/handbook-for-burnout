@@ -1,2 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+
+.logo-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: 25vh;
+}
+
+#welcome-heading {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.index-p {
+    margin-top: 2rem;
+  
+}
