@@ -45,7 +45,7 @@ def delete_activity(request, pk):
 def routines_view(request):
     category = get_object_or_404(AddCategory, category_name='Routines')
     activities = AddActivity.objects.filter(category=category)
-    return render(request, 'activities/base_activities.html', {
+    return render(request, 'activities/routines.html', {
         'activities': activities,
         'category_name': category.category_name,
         'page_specific_content': 'Routines'
@@ -54,7 +54,7 @@ def routines_view(request):
 def podcasts_view(request):
     category = get_object_or_404(AddCategory, category_name='Podcasts')
     activities = AddActivity.objects.filter(category=category)
-    return render(request, 'activities/base_activities.html', {
+    return render(request, 'activities/podcasts.html', {
         'activities': activities,
         'category_name': category.category_name,
         'page_specific_content': 'Podcasts'
@@ -63,7 +63,7 @@ def podcasts_view(request):
 def indoor_activities_view(request):
     category = get_object_or_404(AddCategory, category_name='Indoor activities')
     activities = AddActivity.objects.filter(category=category)
-    return render(request, 'activities/base_activities.html', {
+    return render(request, 'activities/indoor_activities.html', {
         'activities': activities,
         'category_name': category.category_name,
         'page_specific_content': 'Indoor activities'
@@ -73,7 +73,7 @@ def indoor_activities_view(request):
 def outdoor_activities_view(request):
     category = get_object_or_404(AddCategory, category_name='Outdoor activities')
     activities = AddActivity.objects.filter(category=category)
-    return render(request, 'activities/base_activities.html', {
+    return render(request, 'activities/outdoor_activities.html', {
         'activities': activities,
         'category_name': category.category_name,
         'page_specific_content': 'Outdoor activities'

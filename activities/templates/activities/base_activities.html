@@ -4,12 +4,9 @@
 {% block content %}
   
   <!-- Main content based on page_specific_content -->
-  {% if page_specific_content %}
-    <h1>{{ page_specific_content }}</h1>
-  {% else %}
-    <h1>{{ category_name }}</h1>
-  {% endif %}
   
+  {% block specific_content %}  
+  {% endblock %}
   <!-- Include the activities list -->
   {% include 'activities/activities_list.html' with activities=activities category_name=category_name %}
 

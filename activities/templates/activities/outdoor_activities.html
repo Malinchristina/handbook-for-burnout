@@ -1,25 +1,7 @@
-{% extends "base.html" %}
+{% extends "activities/base_activities.html" %}
+{% load static %}
 
-{% block content %}
-  <h1>Outdoor Activities</h1>
-  <p>Content for Outdoor Activities category.</p>
-
-  <ul>
-    {% for activity in activities %}
-      <li>
-        <h3>{{ activity.activity_name }}</h3>
-        <p>{{ activity.description }}</p>
-        {% if activity.url_link %}
-          <p><a href="{{ activity.url_link }}" target="_blank">{{ activity.url_link }}</a></p> 
-        {% endif %}  
-        <p><strong>Category:</strong> {{ category_name }}</p>
-        <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
-      </li>
-    {% empty %}
-      <li>No routines found.</li>
-    {% endfor %}
-  </ul>
-
-  <input class="btn-iconic mt-3" type="button" id="back-one-page"
-  value="Previous page" onClick="javascript:history.go(-1);">
+{% block specific_content %}
+  <h1>{{ category_name }}</h1>
+  <p>Outdoor</p>
 {% endblock %}
