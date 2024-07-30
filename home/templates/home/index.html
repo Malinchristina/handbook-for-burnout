@@ -1,11 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
   <div class="container mt-4">
     <div class="row">
+      <div class="logo-img">
+        <img src="{% static 'images/logo.png' %}" alt="Handbook for burnout logo" class="img-fluid" aria-label="Logo for Handbook for burnout">
+
+      </div>
       <div class="col">
-        <h1 id="welcome-heading">Welcome to the Handbook for Burnout</h1>
-        <p>
+      <div class="col">
+        <!--<h1 id="welcome-heading">Welcome!</h1>-->
+        <p class="index-p">
           Whether you're looking for soothing meditations, gentle activities to regain energy, 
           or insightful podcasts to uplift your spirit, Handbok for Burnout is your go-to resource for 
           reclaiming balance and well-being. Join us and take the first step towards recovery with a community that cares. 
