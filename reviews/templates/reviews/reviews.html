@@ -10,6 +10,7 @@
                 <li class="list-group-item">
                     <strong>{{ review.author }}</strong>: {{ review.comment }}
                     <span class="text-muted float-end">{{ review.created_on|date:"F j, Y" }}</span>
+                    <a href="{% url 'edit_review' review.pk %}" class="btn btn-sm btn-primary">Edit Review</a>
                 </li>
             {% endfor %}
         </ul>
@@ -21,6 +22,5 @@
             <input type="hidden" name="activity_pk" value="{{ activity.pk }}">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        
     </div>
 {% endblock %}
