@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="mb-4">Reviews for {{ activity_name }}</h1>
+        <ul class="list-group">
+            {% for review in reviews %}
+                <li class="list-group-item">
+                    <strong>{{ review.author }}</strong>: {{ review.comment }}
+                    <span class="text-muted float-end">{{ review.created_on|date:"F j, Y" }}</span>
+                    <a href="{% url 'edit_review' review.pk %}" class="btn btn-sm btn-primary">Edit Review</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <form method="post" class="mb-4">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.comment|as_crispy_field }}
+            </div>
+            <input type="hidden" name="activity_pk" value="{{ activity.pk }}">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}
