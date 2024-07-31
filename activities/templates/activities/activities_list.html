@@ -8,6 +8,7 @@
         {% endif %} 
         <p><strong>Category:</strong> {{ category_name }}</p>
         <p><strong>Level:</strong> {{ activity.get_level_display }}</p>
+        <a href="{% url 'reviews' activity.pk %}">Reviews</a>
         {% if user.is_authenticated and user.is_staff %}
         <p>
             <button class="btn btn-primary" data-edit-url="{% url 'edit_activity' activity.pk %}" onclick="ToEditActivity(this)">Edit</button>
