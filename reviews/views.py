@@ -44,7 +44,7 @@ def reviews(request, activity_pk):
 class EditReview(UserPassesTestMixin,UpdateView):
     model = Review
     form_class = ReviewForm
-    template_name = 'reviews/edit_review.html'
+    template_name = 'reviews/edit_reviews.html'
 
     def test_func(self):
         review = self.get_object()
