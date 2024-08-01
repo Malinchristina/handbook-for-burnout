@@ -31,6 +31,17 @@
 
 /* Categories */
 
+.background-container-cat {
+  background: url(../images/categories-img.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #category-heading {
   margin-bottom: 3rem;
+}
+
+.card-body {
+  background-color: #fbfaee;
 }
