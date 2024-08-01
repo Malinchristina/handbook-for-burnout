@@ -45,3 +45,13 @@
 .card-body {
   background-color: #fbfaee;
 }
+
+/* About */
+
+.background-container-about {
+  background: url(../images/about.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
