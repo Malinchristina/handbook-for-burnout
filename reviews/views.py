@@ -6,7 +6,8 @@ from .forms import ReviewForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from activities.models import AddActivity
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseForbidden
+from django.urls import reverse_lazy
 
 
 # Create your views here.
@@ -63,5 +64,17 @@ class EditReview(UserPassesTestMixin,UpdateView):
         messages.error(self.request, 'You do not have permission to edit this review.')
         return redirect('categories')
 
+@login_required
+def delete_review(request, pk):
+    review = get_object_or_404(Review, pk=pk)
     
-
+    if request.user != review.author:
+        return HttpResponseForbidden("You do not have permission to delete this review.")
+    
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, 'Your review was successfully deleted.')
+        return redirect('categories')
+    
+    return HttpResponseForbidden("This action is not allowed.")
+    
