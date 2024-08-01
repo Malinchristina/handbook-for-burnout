@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+/* index */
 
 .logo-img {
   display: flex;
@@ -28,3 +29,8 @@
   background-repeat: no-repeat;
 }
 
+/* Categories */
+
+#category-heading {
+  margin-bottom: 3rem;
+}
