@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+/* index */
 
 .logo-img {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
 .img-fluid {
   max-width: 100%;
   height: 25vh;
+  object-fit: cover;
 }
 
 #welcome-heading {
@@ -19,7 +22,26 @@
   text-align: center;
 }
 
-.index-p {
-    margin-top: 2rem;
-  
+.background-container {
+  background: url(../images/background.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Categories */
+
+.background-container-cat {
+  background: url(../images/categories-img.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#category-heading {
+  margin-bottom: 3rem;
+}
+
+.card-body {
+  background-color: #fbfaee;
 }
