@@ -2,38 +2,39 @@
 {% load static %}
 
 {% block content %}
-  <div class="container mt-4">
+  <div class="container background-container mt-4">
     <div class="row">
       <div class="logo-img">
-        <img src="{% static 'images/logo.png' %}" alt="Handbook for burnout logo" class="img-fluid" aria-label="Logo for Handbook for burnout">
-
+        <img src="{% static 'images/logo.webp' %}" alt="Handbook for burnout logo" class="img-fluid" aria-label="Logo for Handbook for burnout">
       </div>
       <div class="col">
-      <div class="col">
-        <!--<h1 id="welcome-heading">Welcome!</h1>-->
-        <p class="index-p">
-          Whether you're looking for soothing meditations, gentle activities to regain energy, 
-          or insightful podcasts to uplift your spirit, Handbok for Burnout is your go-to resource for 
-          reclaiming balance and well-being. Join us and take the first step towards recovery with a community that cares. 
-          Share your own experiences and tips to help build this library and support others too.
-        </p>
-        <p>Our activities are sorted into three Energy Levels, so you can easily find the ones that suit you best:</p>
-        <ul class="list-group mb-4">
-          <li class="list-group-item">Energy Level 1: Calming, destressing activities</li>
-          <li class="list-group-item">Energy Level 2: Moderate engagement activities</li>
-          <li class="list-group-item">Energy Level 3: Higher engagement activities</li>
-        </ul>
-        <p>
-          To view the full content, you need to be registered and logged in. As a logged-in user, you can comment on, 
-          and rate activities. To keep this space safe and supportive, please maintain a polite tone in your comments. 
-          If there is an activity that does not suit you, feel free to simply scroll on.
-        </p>
-        <p>Discover the right activities for your current state and embark on a journey to recovery with Handbok for Burnout.</p>
-        
-        {% if not user.is_authenticated %}
-          <div class="alert alert-info mt-4" role="alert">
-            <p>Start by <a href="{% url 'account_signup' %}" class="alert-link">registering</a> or <a href="{% url 'account_login' %}" class="alert-link">logging in</a> to access the full library.</p>
-          </div>
+        <div class="p-4">
+          <h1 id="welcome-heading" class="text-center">Welcome!</h1>
+          <p class="text-dark">
+            Whether you're looking for soothing meditations, gentle activities to regain energy, 
+            or insightful podcasts to uplift your spirit, Handbok for Burnout is your go-to resource for 
+            reclaiming balance and well-being. Join us and take the first step towards recovery with a community that cares. 
+            Share your own experiences and tips to help build this library and support others too.
+          </p>
+          <p class="text-dark">
+            Our activities are sorted into three Energy Levels, so you can easily find the ones that suit you best:</p>
+          <ul class="list-group mb-4">
+            <li class="list-group-item">Energy Level 1: Calming, destressing activities</li>
+            <li class="list-group-item">Energy Level 2: Moderate engagement activities</li>
+            <li class="list-group-item">Energy Level 3: Higher engagement activities</li>
+          </ul>
+          <p class="text-dark">
+            To view the full content, you need to be registered and logged in. As a logged-in user, you can comment on, 
+            and rate activities. To keep this space safe and supportive, please maintain a polite tone in your comments. 
+            If there is an activity that does not suit you, feel free to simply scroll on.
+          </p>
+          <p class="text-dark">Discover the right activities for your current state and embark on a journey to recovery with Handbok for Burnout.</p>
+          
+          {% if not user.is_authenticated %}
+            <div class="alert alert-info mt-4" role="alert">
+              <p class="text-dark">Start by <a href="{% url 'account_signup' %}" class="alert-link">registering</a> or <a href="{% url 'account_login' %}" class="alert-link">logging in</a> to access the full library.</p>
+            </div>
+        </div>
         {% endif %}
       </div>
     </div>

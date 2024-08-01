@@ -5,11 +5,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
 
 .img-fluid {
   max-width: 100%;
   height: 25vh;
+  object-fit: cover;
 }
 
 #welcome-heading {
@@ -19,7 +21,10 @@
   text-align: center;
 }
 
-.index-p {
-    margin-top: 2rem;
-  
+.background-container {
+  background: url(../images/background.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
