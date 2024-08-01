@@ -5,41 +5,61 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col">
-        <h1 id="category-heading">Categories</h1>
-        <ul class="list-group">
+        <h1 id="category-heading" class="text-center">Categories</h1>
+        <!-- Grid layout with two columns on medium and larger screens -->
+        <div class="row row-cols-1 row-cols-md-2 g-4">
           {% for category in categories %}
-            {% if user.is_authenticated %}
-              {% if category.category_name == 'Routines' %}
-                <li class="list-group-item">
-                  <a href="{% url 'routines' %}">{{ category.category_name }}</a>
-                </li>
-              {% elif category.category_name == 'Podcasts' %}
-                <li class="list-group-item">
-                  <a href="{% url 'podcasts' %}">{{ category.category_name }}</a>
-                </li>
-              {% elif category.category_name == 'Indoor activities' %}
-                <li class="list-group-item">
-                  <a href="{% url 'indoor-activities' %}">{{ category.category_name }}</a>
-                </li>
-              {% elif category.category_name == 'Outdoor activities' %}
-                <li class="list-group-item">
-                  <a href="{% url 'outdoor-activities' %}">{{ category.category_name }}</a>
-                </li>
+            <div class="col">
+              <!-- Wrap the entire card in an anchor tag to make it clickable -->
+              {% if user.is_authenticated %}
+                {% if category.category_name == 'Routines' %}
+                  <a href="{% url 'routines' %}" class="text-decoration-none text-dark">
+                {% elif category.category_name == 'Podcasts' %}
+                  <a href="{% url 'podcasts' %}" class="text-decoration-none text-dark">
+                {% elif category.category_name == 'Indoor activities' %}
+                  <a href="{% url 'indoor-activities' %}" class="text-decoration-none text-dark">
+                {% elif category.category_name == 'Outdoor activities' %}
+                  <a href="{% url 'outdoor-activities' %}" class="text-decoration-none text-dark">
+                {% else %}
+                  <a href="#" class="text-decoration-none text-dark">
+                {% endif %}
               {% else %}
-                <li class="list-group-item">{{ category.category_name }}</li>
+                <a href="#" class="text-decoration-none text-dark">
               {% endif %}
-            {% else %}
-              <li class="list-group-item">{{ category.category_name }}</li>
-            {% endif %}
+                <div class="card h-100">
+                  <div class="card-body text-center">
+                    {% if user.is_authenticated %}
+                      {% if category.category_name == 'Routines' %}
+                        <i class="fas fa-sun fa-3x mb-3"></i>
+                        <h5 class="card-title">{{ category.category_name }}</h5>
+                      {% elif category.category_name == 'Podcasts' %}
+                        <i class="fas fa-podcast fa-3x mb-3"></i>
+                        <h5 class="card-title">{{ category.category_name }}</h5>
+                      {% elif category.category_name == 'Indoor activities' %}
+                        <i class="fas fa-home fa-3x mb-3"></i>
+                        <h5 class="card-title">{{ category.category_name }}</h5>
+                      {% elif category.category_name == 'Outdoor activities' %}
+                        <i class="fas fa-tree fa-3x mb-3"></i>
+                        <h5 class="card-title">{{ category.category_name }}</h5>
+                      {% else %}
+                        <p class="card-text">{{ category.category_name }}</p>
+                      {% endif %}
+                    {% else %}
+                      <p class="card-text">{{ category.category_name }}</p>
+                    {% endif %}
+                  </div>
+                </div>
+              </a>
+            </div>
           {% endfor %}
-        </ul>
+        </div>
+        <!-- Remove when logged in -->
         {% if not user.is_authenticated %}
           <div class="alert alert-warning mt-4" role="alert">
-            <p>The content on each category can only be viewed if you are logged in. Do you want to <a href="{% url 'account_login' %}" class="alert-link">log in</a>?</p>
+            <p class="text-dark">The content on each category can only be viewed if you are logged in. Do you want to <a href="{% url 'account_login' %}" class="alert-link">log in</a>?</p>
           </div>
         {% endif %}
       </div>
     </div>
   </div>
 {% endblock %}
-
