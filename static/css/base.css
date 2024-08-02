@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+/* Global */
+
+#heading {
+  font-family: Garamond, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+h2.heading {
+  font-family: Garamond, serif;
+  color: #333;
+}
+
 /* index */
 
 .logo-img {
@@ -16,6 +31,7 @@
 }
 
 #welcome-heading {
+  font-family: Garamond, serif;
   font-size: 3rem;
   font-weight: 500;
   color: #333;
@@ -27,6 +43,15 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.level-list {
+  opacity: 0.8;
+}
+
+.alert {
+  opacity: 0.7;
 }
 
 /* Categories */
