@@ -11,8 +11,8 @@
                     <strong>{{ review.author }}</strong>: {{ review.comment }}
                     <span class="text-muted float-end">{{ review.created_on|date:"F j, Y" }}</span>
                     {% if review.author == request.user %}
-                    <a href="{% url 'edit_review' review.pk %}" class="btn btn-sm btn-primary">Edit Review</a>
-                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'delete_review' review.pk %}">Delete Review</button>
+                    <a href="{% url 'edit_review' review.pk %}" class="btn btn-sm btn-primary">Edit</a>
+                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'delete_review' review.pk %}">Delete</button>
                     {% endif %}
                 </li>
             {% endfor %}
