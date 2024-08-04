@@ -106,6 +106,13 @@ body {
   background: url(../images/indoor-activities.webp) no-repeat center center/cover;
   width: auto;
   height: 60vw;
+}
+
+/* Outdoor activities */
+.outdoor-img {
+  background: url(../images/outdoor-activities.webp) no-repeat center center/cover;
+  width: auto;
+  height: 60vw;
   opacity: 0.9;
 }
 
