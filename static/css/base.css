@@ -24,7 +24,7 @@ body {
 }
 
 .activity-p {
-  padding: 0 5px 0 10px;
+  padding: 10px 5px 0 10px;
 }
 
 .btn-primary {
@@ -91,6 +91,14 @@ body {
 
 .card-body {
   background-color: #C4E0EB;
+}
+
+/* Podcasts */
+.podcast-img {
+  background: url(../images/podcast.webp) no-repeat center center/cover;
+  width: auto;
+  height: 60vw;
+  opacity: 0.9;
 }
 
 /* About */
