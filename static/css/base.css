@@ -2,7 +2,7 @@
 
 /* Global */
 
-#heading {
+.heading {
   font-family: Garamond, serif;
   font-size: 3rem;
   font-weight: 500;
@@ -13,6 +13,10 @@
 h2.heading {
   font-family: Garamond, serif;
   color: #333;
+}
+
+.activity-p {
+  padding: 0 5px 0 10px;
 }
 
 /* index */
