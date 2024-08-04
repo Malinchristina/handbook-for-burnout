@@ -73,10 +73,14 @@ h2.heading {
 
 /* About */
 
-.background-container-about {
-  background: url(../images/about.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.9;
+.about-text {
+  padding-top: 10px;
+}
+
+.about-img {
+  background: url(../images/me.webp) no-repeat center center/cover;
+  width: auto;
+  height: 90vw;
+  border-radius: 50%;
+  margin: 20px 0 20px 0;
 }
