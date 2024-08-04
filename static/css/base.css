@@ -1,22 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
-/* Global */
+/* General */
 
 .heading {
   font-family: Garamond, serif;
   font-size: 3rem;
   font-weight: 500;
-  color: #333;
+  color: #4B4947;
   text-align: center;
 }
 
 h2.heading {
   font-family: Garamond, serif;
-  color: #333;
+  color: #4B4947;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4B4947;
+  background-color: #f8f9fa;
 }
 
 .activity-p {
   padding: 0 5px 0 10px;
+}
+
+.btn-primary {
+  background-color: #A4AF69;
+  border-color: #A4AF69;
 }
 
 /* index */
@@ -25,7 +38,7 @@ h2.heading {
   font-family: Garamond, serif;
   font-size: 3rem;
   font-weight: 500;
-  color: #333;
+  color: #4B4947;
   text-align: center;
 }
 
@@ -46,7 +59,7 @@ h2.heading {
   font-family: Garamond, serif;
   font-size: 3rem;
   font-weight: 500;
-  color: #333;
+  color: #4B4947;
   text-align: center;
 }
 
@@ -77,7 +90,7 @@ h2.heading {
 }
 
 .card-body {
-  background-color: #fbfaee;
+  background-color: #C4E0EB;
 }
 
 /* About */
@@ -86,12 +99,16 @@ h2.heading {
   padding-top: 10px;
 }
 
+.about-img-div {
+  background-color: #A4AF69;
+  border-radius: 16px;
+}
+
 .about-img {
   background: url(../images/me.webp) no-repeat center center/cover;
   width: auto;
   height: 90vw;
   border-radius: 50%;
-  margin: 20px 0 20px 0;
 }
 
 /* Activities */
@@ -102,4 +119,10 @@ h2.heading {
 
 .activity_name {
   margin-top: 20px;
+}
+
+/* Sign out */
+
+.sign-out-h {
+  text-align: left;
 }
