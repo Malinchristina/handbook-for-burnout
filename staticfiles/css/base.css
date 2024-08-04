@@ -1,6 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+/* General */
+
+.heading {
+  font-family: Garamond, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #4B4947;
+  text-align: center;
+}
+
+h2.heading {
+  font-family: Garamond, serif;
+  color: #4B4947;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4B4947;
+  background-color: #f8f9fa;
+}
+
+.activity-p {
+  padding: 0 5px 0 10px;
+}
+
+.btn-primary {
+  background-color: #A4AF69;
+  border-color: #A4AF69;
+}
+
 /* index */
+
+#heading {
+  font-family: Garamond, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #4B4947;
+  text-align: center;
+}
 
 .logo-img {
   display: flex;
@@ -16,9 +56,10 @@
 }
 
 #welcome-heading {
+  font-family: Garamond, serif;
   font-size: 3rem;
   font-weight: 500;
-  color: #333;
+  color: #4B4947;
   text-align: center;
 }
 
@@ -27,31 +68,61 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.level-list {
+  opacity: 0.8;
+}
+
+.alert {
+  opacity: 0.7;
 }
 
 /* Categories */
-
-.background-container-cat {
-  background: url(../images/categories-img.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 
 #category-heading {
   margin-bottom: 3rem;
 }
 
+.cat-cards {
+  margin-top: 10px;
+}
+
 .card-body {
-  background-color: #fbfaee;
+  background-color: #C4E0EB;
 }
 
 /* About */
 
-.background-container-about {
-  background: url(../images/about.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.9;
+.about-text {
+  padding-top: 10px;
+}
+
+.about-img-div {
+  background-color: #A4AF69;
+  border-radius: 16px;
+}
+
+.about-img {
+  background: url(../images/me.webp) no-repeat center center/cover;
+  width: auto;
+  height: 90vw;
+  border-radius: 50%;
+}
+
+/* Activities */
+
+/*.ext-link {
+  padding-bottom: 10px;
+}*/
+
+.activity_name {
+  margin-top: 20px;
+}
+
+/* Sign out */
+
+.sign-out-h {
+  text-align: left;
 }
