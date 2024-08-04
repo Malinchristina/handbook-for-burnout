@@ -101,6 +101,14 @@ body {
   opacity: 0.9;
 }
 
+/* Indoor activities */
+.indoor-img {
+  background: url(../images/indoor-activities.webp) no-repeat center center/cover;
+  width: auto;
+  height: 60vw;
+  opacity: 0.9;
+}
+
 /* About */
 
 .about-text {
