@@ -21,6 +21,14 @@ h2.heading {
 
 /* index */
 
+#heading {
+  font-family: Garamond, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
 .logo-img {
   display: flex;
   align-items: center;
