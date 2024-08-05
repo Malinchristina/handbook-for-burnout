@@ -2,6 +2,10 @@
 
 /* General */
 
+main {
+  flex: 1 0 auto;
+}
+
 .heading {
   font-family: Garamond, serif;
   font-size: 3rem;
@@ -21,15 +25,24 @@ body {
   line-height: 1.6;
   color: #4B4947;
   background-color: #f8f9fa;
-}
-
-.activity-p {
-  padding: 20px 5px 0 10px;
+  margin-bottom: 40px;
 }
 
 .btn-primary {
-  background-color: #A4AF69;
-  border-color: #A4AF69;
+  background-color: #FBB7C0;
+  border-color: #FBB7C0;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #DC136C;
+  border-color: #DC136C;
+  color: #4B4947;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* index */
@@ -144,12 +157,24 @@ body {
 
 /* Activities */
 
-/*.ext-link {
-  padding-bottom: 10px;
-}*/
-
 .activity_name {
   margin-top: 20px;
+}
+
+.activity-p {
+  padding: 20px 5px 0 10px;
+}
+
+.activity-link {
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 20em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.previous-btn {
+  margin-left: 31px;
 }
 
 /* Sign out */
@@ -157,3 +182,19 @@ body {
 .sign-out-h {
   text-align: left;
 }
+
+/* Footer */
+
+.footer {
+  position: fixed;
+  left: 0;
+  height: 7vh;
+  bottom: 0px;
+  width: 100%;
+  background-color: #4B4947;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8f9fa;
+}
+
