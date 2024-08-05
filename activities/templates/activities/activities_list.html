@@ -4,7 +4,7 @@
         <h3 class="activity_name">{{ activity.activity_name }}</h3> 
         <p>{{ activity.description }}</p>
         {% if activity.url_link %}
-        <p><a href="{{ activity.url_link }}" target="_blank">{{ activity.url_link }}</a></p> 
+        <p><a href="{{ activity.url_link }}" class="activity-link" target="_blank">{{ activity.url_link }}</a></p> 
         {% endif %} 
         <p><strong>{{ activity.get_level_display }}</strong></p>
         <a class="ext-link" href="{% url 'reviews' activity.pk %}">Reviews</a>
