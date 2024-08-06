@@ -45,6 +45,10 @@ ul {
   list-style-type: none;
 }
 
+.heading-left {
+  text-align: left;
+}
+
 /* index */
 
 #heading {
@@ -177,11 +181,13 @@ ul {
   margin-left: 31px;
 }
 
+/* Reviews */
+
+
+
 /* Sign out */
 
-.sign-out-h {
-  text-align: left;
-}
+
 
 /* Footer */
 
