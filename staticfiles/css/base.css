@@ -45,6 +45,10 @@ ul {
   list-style-type: none;
 }
 
+.heading-left {
+  text-align: left;
+}
+
 /* index */
 
 #heading {
@@ -64,8 +68,8 @@ ul {
 
 .img-fluid {
   max-width: 100%;
-  height: 25vh;
-  object-fit: cover;
+  height: 14vh;
+  object-fit: contain;
 }
 
 #welcome-heading {
@@ -177,11 +181,13 @@ ul {
   margin-left: 31px;
 }
 
+/* Reviews */
+
+
+
 /* Sign out */
 
-.sign-out-h {
-  text-align: left;
-}
+
 
 /* Footer */
 
@@ -198,3 +204,11 @@ ul {
   color: #f8f9fa;
 }
 
+@media screen and (min-width: 768px) {
+  .img-fluid {
+    max-width: 100%;
+    height: 25vh;
+    object-fit: cover;
+  }
+  
+}
