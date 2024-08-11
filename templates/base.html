@@ -28,9 +28,10 @@
 
         <main class="flex-shrink-0 main-bg">
             {% if user.is_authenticated %}
-            <p class="text-end m-3">You are logged in as {{ user }}</p>
+            <p class="text-end m-3"><a href="{% url 'account_logout' %}" i class="fa-solid fa-user"></i></p>
             {% else %}
-            <p class="text-end m-3">You are not logged in</p>
+            <p class="text-end m-3"><a href="{% url 'account_login' %}" i class="fa-solid fa-user-xmark"></i></a>
+            </p>
             {% endif %}
 
             <!-- Display Messages -->
