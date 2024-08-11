@@ -209,19 +209,14 @@ a.ext-link {
 
 /* About */
 
-.background-container-about {
-  background-color: #c4e0ebd3;
+.about-background {
+  background-color: var(--square-blue);
   border-radius: 12px;
+  padding: 20px;
 }
 
 .about-text {
   padding-top: 10px;
-}
-
-.about-area {
-  background-color: var(--square-blue);
-  border-radius: 12px;
-  padding: 20px;
 }
 
 .about-img-div {
@@ -275,7 +270,8 @@ a.ext-link {
     width: auto;
     height: 50vw;
     margin-top: 28px;
-    opacity: 0.9;
+    opacity: 0.8;
+    border-radius: 2px;
   }
 
   /* About */
