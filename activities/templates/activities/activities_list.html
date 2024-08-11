@@ -18,6 +18,7 @@
             <button class="btn btn-danger" data-delete-url="{% url 'delete_activity' activity.pk %}" onclick="ToDeleteActivity(this)">Delete</button>
         </p>
         {% endif %}
+        <hr>
     </li>
     {% empty %}
     <li>No routines found.</li>
