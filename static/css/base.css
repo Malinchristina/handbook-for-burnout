@@ -214,6 +214,14 @@ ul {
     object-fit: cover;
   }
 
+  /* Categories */
+  .cat-img {
+    background: url(../images/cat-img.webp) no-repeat center center/cover;
+    width: auto;
+    height: 50vw;
+    margin-top: 28px;
+  }
+
   /* About */
   .about-img {
     background: url(../images/me.webp) no-repeat center center/cover;
