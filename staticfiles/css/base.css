@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+:root {
+  --square-blue: #C4E0EB;
+  --light-pink: #FBB7C0;
+  --hover-pink: #DC136C;
+  --dark-grey: #4B4947;
+  --bg-color: #f8f9fa;
+  
+}
+
+
 /* General */
 
 main {
@@ -10,23 +20,33 @@ main {
 .heading {
   font-family: Garamond, serif;
   font-size: 3rem;
-  font-weight: 500;
-  color: #4B4947;
+  font-weight: bold;
+  color: var(--dark-grey);
   text-align: center;
 }
 
 h2.heading {
   font-family: Garamond, serif;
-  color: #4B4947;
+  color: var(--dark-grey);
+  font-weight: bold;
 }
 
 body {
   font-family: Roboto, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #4B4947;
-  background-color: #f8f9fa;
+  color: var(--dark-grey);
+  background-color: var(--bg-color);
   margin-bottom: 40px;
+}
+
+.fa-solid.fa-user-xmark,
+.fa-solid.fa-user {
+  color: var(--dark-grey);
+  cursor: pointer;
+  font-size: x-large;
+  padding-right: 30px;
+  text-decoration: none;
 }
 
 .btn {
@@ -34,15 +54,15 @@ body {
 }
 
 .btn-primary {
-  background-color: #FBB7C0;
-  border-color: #FBB7C0;
+  background-color: var(--light-pink);
+  border-color: var(--light-pink);
   color: black;
 }
 
 .btn-primary:hover {
-  background-color: #DC136C;
-  border-color: #DC136C;
-  color: #4B4947;
+  background-color: var(--hover-pink);
+  border-color: var(--hover-pink);
+  color: var(--dark-grey);
   color: white;
 }
 
@@ -59,8 +79,8 @@ ul {
 #heading {
   font-family: Garamond, serif;
   font-size: 3rem;
-  font-weight: 500;
-  color: #4B4947;
+  font-weight: bold;
+  color: var(--dark-grey);
   text-align: center;
 }
 
@@ -81,7 +101,7 @@ ul {
   font-family: Garamond, serif;
   font-size: 3rem;
   font-weight: 500;
-  color: #4B4947;
+  color: var(--dark-grey);
   text-align: center;
 }
 
@@ -112,22 +132,48 @@ ul {
 }
 
 .card-body {
-  background-color: #C4E0EB;
+  background-color: var(--square-blue);
 }
 
 /* Activities */
+
+.activity_name {
+  margin-top: 20px;
+}
+
+.activity-p {
+  padding: 20px 5px 0 10px;
+}
+
 .ext-link-div {
   display: flex;
   justify-content: flex-end;
 }
 
 a.ext-link {
-    background-color: #FBB7C0;
-    border-color: #FBB7C0;
+    background-color: var(--light-pink);
+    border-color: var(--light-pink);
     color: black;
-    padding: 12px 22px;
+    padding: 8px 12px;
     border-radius: 25px;
     text-decoration: none;
+}
+
+.activity-link {
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 20em;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.previous-btn {
+  margin-left: 31px;
+}
+
+.previous-div {
+  display: flex;
+  justify-content: center;
 }
 
 /* Podcasts */
@@ -163,6 +209,12 @@ a.ext-link {
 
 /* About */
 
+.about-background {
+  background-color: var(--square-blue);
+  border-radius: 12px;
+  padding: 20px;
+}
+
 .about-text {
   padding-top: 10px;
 }
@@ -180,28 +232,7 @@ a.ext-link {
   border-radius: 50%;
   aspect-ratio: 1/1;
   max-width: 333px;
-}
-
-/* Activities */
-
-.activity_name {
-  margin-top: 20px;
-}
-
-.activity-p {
-  padding: 20px 5px 0 10px;
-}
-
-.activity-link {
-  display: inline-block;
-  text-overflow: ellipsis;
-  width: 20em;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.previous-btn {
-  margin-left: 31px;
+  margin-right: 30px;
 }
 
 /* Footer */
@@ -212,11 +243,11 @@ a.ext-link {
   height: 7vh;
   bottom: 0px;
   width: 100%;
-  background-color: #4B4947;
+  background-color: var(--dark-grey);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f8f9fa;
+  color: var(--bg-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -239,7 +270,8 @@ a.ext-link {
     width: auto;
     height: 50vw;
     margin-top: 28px;
-    opacity: 0.9;
+    opacity: 0.8;
+    border-radius: 2px;
   }
 
   /* About */
