@@ -29,6 +29,10 @@ body {
   margin-bottom: 40px;
 }
 
+.btn {
+  border-radius: 25px;
+}
+
 .btn-primary {
   background-color: #FBB7C0;
   border-color: #FBB7C0;
@@ -109,6 +113,21 @@ ul {
 
 .card-body {
   background-color: #C4E0EB;
+}
+
+/* Activities */
+.ext-link-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a.ext-link {
+    background-color: #FBB7C0;
+    border-color: #FBB7C0;
+    color: black;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
 }
 
 /* Podcasts */

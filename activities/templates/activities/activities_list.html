@@ -7,7 +7,9 @@
         <p><a href="{{ activity.url_link }}" class="activity-link" target="_blank">{{ activity.url_link }}</a></p> 
         {% endif %} 
         <p><strong>{{ activity.get_level_display }}</strong></p>
-        <a class="ext-link" href="{% url 'reviews' activity.pk %}">Reviews</a>
+        <div class="ext-link-div">
+            <a class="ext-link" href="{% url 'reviews' activity.pk %}">Reviews</a>
+        </div>
         {% if user.is_authenticated and user.is_staff %}
         <p>
             <button class="btn btn-primary" data-edit-url="{% url 'edit_activity' activity.pk %}" onclick="ToEditActivity(this)">Edit</button>
