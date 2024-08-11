@@ -208,10 +208,17 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+
+  /* index */
   .img-fluid {
     max-width: 100%;
     height: 25vh;
     object-fit: cover;
+  }
+
+  .level-div {
+    display: flex;
+    justify-content: left;
   }
 
   /* Categories */
