@@ -28,7 +28,8 @@
 
         <main class="flex-shrink-0 main-bg">
             {% if user.is_authenticated %}
-            <p class="text-end m-3"><a href="{% url 'account_logout' %}" i class="fa-solid fa-user"></i></p>
+            <p class="text-end m-3"><a href="{% url 'account_logout' %}" i class="fa-solid fa-user"></i></a>
+            </p>
             {% else %}
             <p class="text-end m-3"><a href="{% url 'account_login' %}" i class="fa-solid fa-user-xmark"></i></a>
             </p>
