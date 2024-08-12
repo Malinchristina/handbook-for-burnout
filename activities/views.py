@@ -1,3 +1,4 @@
+from django.db.models import Count
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
@@ -44,7 +45,7 @@ def delete_activity(request, pk):
 
 def routines_view(request):
     category = get_object_or_404(AddCategory, category_name='Routines')
-    activities = AddActivity.objects.filter(category=category)
+    activities = AddActivity.objects.filter(category=category).annotate(review_count=Count('reviews'))
     return render(request, 'activities/routines.html', {
         'activities': activities,
         'category_name': category.category_name,

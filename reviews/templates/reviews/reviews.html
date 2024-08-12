@@ -25,6 +25,10 @@
             <input type="hidden" name="activity_pk" value="{{ activity.pk }}">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <!-- Button previous page -->
+        <div class="previous-div">
+            <input class="btn btn-primary previous-btn" type="button" id="back-one-page" value="Previous page" onClick="javascript:history.go(-1);">
+        </div>
     </div>
     <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -46,7 +50,6 @@
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block extras %}

@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 class Review(models.Model):
     review_id = models.AutoField(primary_key=True)
     comment = models.TextField()
-    activity_pk = models.ForeignKey('activities.AddActivity', on_delete=models.CASCADE)
+    activity_pk = models.ForeignKey('activities.AddActivity', on_delete=models.CASCADE, related_name='reviews')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
 
