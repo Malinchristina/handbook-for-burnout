@@ -32,7 +32,7 @@ def reviews(request, activity_pk):
             review.save()
             messages.success(request, 'Your review was successfully added.')
             return redirect('categories')
-    
+
     form = ReviewForm()
 
     all_reviews = Review.objects.filter(activity_pk=activity)
@@ -42,7 +42,8 @@ def reviews(request, activity_pk):
         'reviews': all_reviews
     })
 
-class EditReview(UserPassesTestMixin,UpdateView):
+
+class EditReview(UserPassesTestMixin, UpdateView):
     model = Review
     form_class = ReviewForm
     template_name = 'reviews/edit_reviews.html'
@@ -57,24 +58,27 @@ class EditReview(UserPassesTestMixin,UpdateView):
         return redirect('categories')
 
     def form_invalid(self, form):
-        messages.error(self.request, 'There was an error updating your review.')
+        messages.error(self.request,
+                       'There was an error updating your review.')
         return redirect('categories')
 
     def handle_no_permission(self):
-        messages.error(self.request, 'You do not have permission to edit this review.')
+        messages.error(self.request,
+                       'You do not have permission to edit this review.')
         return redirect('categories')
+
 
 @login_required
 def delete_review(request, pk):
     review = get_object_or_404(Review, pk=pk)
-    
+
     if request.user != review.author:
-        return HttpResponseForbidden("You do not have permission to delete this review.")
-    
+        return HttpResponseForbidden("You do not have permission"
+                                     "to delete this review.")
+
     if request.method == 'POST':
         review.delete()
         messages.success(request, 'Your review was successfully deleted.')
         return redirect('categories')
-    
+
     return HttpResponseForbidden("This action is not allowed.")
-    

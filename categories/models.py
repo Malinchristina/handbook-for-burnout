@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
 # Create your models here.
+
+
 class AddCategory(models.Model):
     category_id = models.AutoField(primary_key=True)
     category_name = models.CharField(max_length=100)
@@ -13,9 +15,12 @@ class AddCategory(models.Model):
         return self.category_name
 
     def clean(self):
-        # Check for uniqueness of category_name, excluding the current instance in case of update
-        if AddCategory.objects.exclude(pk=self.pk).filter(category_name=self.category_name).exists():
-            raise ValidationError({'category_name': 'A category with this name already exists.'})
+        # Check for uniqueness of category_name, excluding the current
+        # instance in case of update
+        if AddCategory.objects.exclude(pk=self.pk).filter(
+                category_name=self.category_name).exists():
+            raise ValidationError(
+                {'category_name': 'A category with this name already exists.'})
 
     def save(self, *args, **kwargs):
         # Call the clean method to validate the instance before saving
@@ -26,5 +31,6 @@ class AddCategory(models.Model):
             # This is a new record; proceed with normal save
             super().save(*args, **kwargs)
         else:
-            # This is an update; skip the clean method since it's already been called
+            # This is an update; skip the clean method
+            # since it's already been called
             super().save(update_fields=['category_name'], *args, **kwargs)

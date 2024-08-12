@@ -5,6 +5,7 @@ from .models import AddCategory
 
 # Register your models here.
 
+
 @admin.register(AddCategory)
 class AddCategoryAdmin(admin.ModelAdmin):
     list_display = ('category_id', 'category_name', 'author', 'created_on')
@@ -15,7 +16,9 @@ class AddCategoryAdmin(admin.ModelAdmin):
         try:
             obj.save()
             # If the save is successful, only display success message
-            self.message_user(request, f'The category "{obj.category_name}" was added/updated successfully.', level='SUCCESS')
+            self.message_user(request, f'The category "{
+                obj.category_name}" was added/updated successfully.',
+                level='SUCCESS')
         except ValidationError as e:
             # If there's a validation error, only display error message
             self.message_user(request, str(e), level='ERROR')

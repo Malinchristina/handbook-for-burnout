@@ -6,11 +6,16 @@ from .forms import CategoryForm
 # Create your views here.
 
 # View to list categories
+
+
 def category_list(request):
     categories = AddCategory.objects.all()
-    return render(request, 'categories/categories.html', {'categories': categories})
-    
+    return render(request, 'categories/categories.html', {
+                  'categories': categories})
+
 # View to add a new category (with authentication check)
+
+
 @login_required
 def add_category(request):
     if not request.user.is_staff:
@@ -19,10 +24,9 @@ def add_category(request):
         form = CategoryForm(request.POST)
         if form.is_valid():
             category = form.save(commit=False)
-            category.author = request.user  # Automatically set the author to the current user
+            category.author = request.user
             category.save()
             return HttpResponse('Category added')
     else:
         form = CategoryForm()
     return render(request, 'add_category.html', {'form': form})
-

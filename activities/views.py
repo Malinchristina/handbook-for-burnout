@@ -18,10 +18,11 @@ def add_activity(request):
             activity.author = request.user
             activity.save()
             messages.success(request, 'The activity was successfully added.')
-            return redirect('categories') 
+            return redirect('categories')
     else:
         form = AddActivityForm()
     return render(request, 'activities/add_activity.html', {'form': form})
+
 
 def edit_activity(request, pk):
     activity = get_object_or_404(AddActivity, pk=pk)
@@ -45,12 +46,14 @@ def delete_activity(request, pk):
 
 def routines_view(request):
     category = get_object_or_404(AddCategory, category_name='Routines')
-    activities = AddActivity.objects.filter(category=category).annotate(review_count=Count('reviews'))
+    activities = AddActivity.objects.filter(
+        category=category).annotate(review_count=Count('reviews'))
     return render(request, 'activities/routines.html', {
         'activities': activities,
         'category_name': category.category_name,
         'page_specific_content': 'Routines'
     })
+
 
 def podcasts_view(request):
     category = get_object_or_404(AddCategory, category_name='Podcasts')
@@ -61,8 +64,10 @@ def podcasts_view(request):
         'page_specific_content': 'Podcasts'
     })
 
+
 def indoor_activities_view(request):
-    category = get_object_or_404(AddCategory, category_name='Indoor activities')
+    category = get_object_or_404(
+        AddCategory, category_name='Indoor activities')
     activities = AddActivity.objects.filter(category=category)
     return render(request, 'activities/indoor_activities.html', {
         'activities': activities,
@@ -72,7 +77,8 @@ def indoor_activities_view(request):
 
 
 def outdoor_activities_view(request):
-    category = get_object_or_404(AddCategory, category_name='Outdoor activities')
+    category = get_object_or_404(
+        AddCategory, category_name='Outdoor activities')
     activities = AddActivity.objects.filter(category=category)
     return render(request, 'activities/outdoor_activities.html', {
         'activities': activities,

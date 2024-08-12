@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
@@ -27,4 +26,3 @@ urlpatterns = [
     path('activities/', include('activities.urls'), name="activities-urls"),
     path('reviews/', include('reviews.urls'), name="reviews-urls"),
 ]
-

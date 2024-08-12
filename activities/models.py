@@ -6,12 +6,14 @@ LEVEL = ((0, "All levels"), (1, "Level 1"), (2, "Level 2"), (3, "Level 3"),)
 
 # Create your models here.
 
+
 class AddActivity(models.Model):
     activity_id = models.AutoField(primary_key=True)
     activity_name = models.CharField(max_length=100)
     description = models.TextField()
-    category = models.ForeignKey('categories.AddCategory', on_delete=models.CASCADE)
-    level= models.IntegerField(choices=LEVEL,)
+    category = models.ForeignKey('categories.AddCategory', on_delete=models.
+                                 CASCADE)
+    level = models.IntegerField(choices=LEVEL,)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
     url_link = models.URLField(max_length=200, blank=True)
@@ -20,9 +22,14 @@ class AddActivity(models.Model):
         return self.activity_name
 
     def clean(self):
-        # Check for uniqueness of activity_name, excluding the current instance in case of update
-        if AddActivity.objects.exclude(pk=self.pk).filter(activity_name=self.activity_name).exists():
-            raise ValidationError({'activity_name': 'An activity with this name already exists.'})
+        # Check for uniqueness of activity_name,
+        # excluding the current instance in case of update
+        if AddActivity.objects.exclude(
+            pk=self.pk).filter(
+                activity_name=self.activity_name).exists():
+            raise ValidationError(
+                {'activity_name':
+                 'An activity with this name already exists.'})
 
     def save(self, *args, **kwargs):
         # Call the clean method to validate the instance before saving
@@ -33,5 +40,6 @@ class AddActivity(models.Model):
             # This is a new record; proceed with normal save
             super().save(*args, **kwargs)
         else:
-            # This is an update; skip the clean method since it's already been called
+            # This is an update; skip the clean method since it's
+            # already been called
             super().save(update_fields=['activity_name'], *args, **kwargs)
