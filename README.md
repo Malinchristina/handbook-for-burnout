@@ -5,7 +5,7 @@ Handbok for Burnout is a supportive community app designed specifically for indi
 
 We understand that when one is experiencing burnout, even simple tasks like googling for tips can feel overwhelming. That’s why we’ve created Handbok for Burnout – to provide a curated list of suggestions all in one place, making the recovery journey easier and less stressful. You can think of it as a library only for burnout.
 
-To foster a sense of community and ensure a safe, interactive space, users must register and log in to comment, rate, and contribute their own tips and suggestions. This collaborative feature encourages meaningful engagement and connection among members who understand the journey of overcoming burnout.
+To foster a sense of community and ensure a safe, interactive space, users must register and log in to read and comment on activities. This collaborative feature encourages meaningful engagement and connection among members who understand the journey of overcoming burnout.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -36,6 +36,10 @@ To foster a sense of community and ensure a safe, interactive space, users must 
     * [Media](#media)
     * [Acknowledgements](#acknowledgements)
     
+
+## User Experience (UX)
+
+The site is designed with a mobile-first approach, ensuring an optimal browsing experience on smartphones and tablets. This approach prioritizes fast load times, intuitive navigation, and responsive design, making the site accessible and user-friendly across all devices.
 
 ## Project planning
 
@@ -105,6 +109,8 @@ These categories can only be added by the admin user in the admin panel to ensur
 #### Tools & Programs
 
 ### Testing
+
+[Testing](testing.md) 
 
 ### Deployment
 
