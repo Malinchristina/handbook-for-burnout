@@ -74,11 +74,12 @@ ul {
   text-align: left;
 }
 
-.alert {
+.alert-alert-success {
   display: flex;
   justify-content: center;
   background-color: var(--square-blue);
   width: 396px;
+  opacity: 0.8;
 }
 
 .color-background {
