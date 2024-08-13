@@ -12,24 +12,26 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h2 class="heading">{% trans "Sign In" %}</h2>
-
+        </div>
+    </div>
+    <div class="color-background-light">
             <p>{% blocktrans %}Welcome back!
                 <br>
                 To take part of this community, leave a comment or like an activity, please log in. If
                 you have not created an account yet, then please <a class="link" href="{{ signup_url }}">sign up</a>
                 first.{% endblocktrans %}</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form | crispy }}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="btn btn-primary right" type="submit">{% trans "Sign In" %}</button>
-            </form>
+      
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+                <form class="login" method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <button class="btn btn-primary right" type="submit">{% trans "Sign In" %}</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

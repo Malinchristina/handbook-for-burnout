@@ -8,21 +8,26 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <h2 class="heading heading-left">{% trans "Sign Out" %}</h2>
-
-            <p>{% trans 'Are you sure you want to sign out?' %}</p>
+            <h2 class="heading">{% trans "Sign Out" %}</h2>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
 
-            <form method="post" action="{% url 'account_logout' %}">
-                {% csrf_token %}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="btn btn-primary right" type="submit">{% trans 'Sign Out' %}</button>
-            </form>
+    <div class="color-background-light">
+        <p class="text-dark text-center">{% trans 'Are you sure you want to sign out?' %}</p>
+     
+        <div class="row">
+            <div class="col-md-8 mt-3 offset-md-2">
+
+                <form method="post" action="{% url 'account_logout' %}">
+                    {% csrf_token %}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <div class="center-button">
+                        <button class="btn btn-primary" type="submit">{% trans 'Sign Out' %}</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

@@ -2,6 +2,7 @@
 
 :root {
   --square-blue: #C4E0EB;
+  --square-beige: #F5EFE8;
   --light-pink: #FBB7C0;
   --hover-pink: #DC136C;
   --dark-grey: #4B4947;
@@ -78,6 +79,18 @@ ul {
   justify-content: center;
   background-color: var(--square-blue);
   width: 396px;
+}
+
+.color-background {
+  background-color: var(--square-blue);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.color-background-light {
+  background-color: var(--square-beige);
+  border-radius: 12px;
+  padding: 20px;
 }
 
 /* index */
@@ -216,12 +229,6 @@ a.ext-link {
 
 /* About */
 
-.about-background {
-  background-color: var(--square-blue);
-  border-radius: 12px;
-  padding: 20px;
-}
-
 .about-text {
   padding-top: 10px;
 }
@@ -258,6 +265,15 @@ a.ext-link {
 }
 
 @media screen and (min-width: 768px) {
+  /* General */
+
+  .color-background,
+  .color-background-light {
+    width: 580px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
 
   /* index */
   .img-fluid {
@@ -288,8 +304,8 @@ a.ext-link {
     height: auto;
     border-radius: 3px;
     aspect-ratio: 1/1;
-    max-width: 225px;
-    margin-left: 10px;
+    max-width: 180px;
+    margin-left: 20px;
   }
   
 }
