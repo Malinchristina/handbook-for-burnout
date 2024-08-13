@@ -73,6 +73,13 @@ ul {
   text-align: left;
 }
 
+.alert {
+  display: flex;
+  justify-content: center;
+  background-color: var(--square-blue);
+  width: 396px;
+}
+
 /* index */
 
 #heading {
