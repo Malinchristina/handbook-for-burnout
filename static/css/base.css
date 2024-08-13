@@ -170,7 +170,8 @@ a.ext-link {
   margin-left: 31px;
 }
 
-.previous-div {
+.previous-div,
+.center-button {
   display: flex;
   justify-content: center;
 }
