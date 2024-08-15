@@ -98,6 +98,11 @@ ul {
   padding: 20px;
 }
 
+.message-center {
+  display: flex;
+  justify-content: center;
+}
+
 /* index */
 
 #heading {
