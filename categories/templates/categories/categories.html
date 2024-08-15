@@ -22,9 +22,9 @@
                 {% elif category.category_name == 'Podcasts' %}
                   <a href="{% url 'podcasts' %}" class="text-decoration-none text-dark">
                 {% elif category.category_name == 'Indoor activities' %}
-                  <a href="{% url 'indoor-activities' %}" class="text-decoration-none text-dark">
+                  <a href="{% url 'indoor_activities' %}" class="text-decoration-none text-dark">
                 {% elif category.category_name == 'Outdoor activities' %}
-                  <a href="{% url 'outdoor-activities' %}" class="text-decoration-none text-dark">
+                  <a href="{% url 'outdoor_activities' %}" class="text-decoration-none text-dark">
                 {% else %}
                   <a href="#" class="text-decoration-none text-dark">
                 {% endif %}
