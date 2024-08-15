@@ -44,6 +44,25 @@
           {% endif %}
         </ul>
       </div>
+      <div class="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">
+            <a href="{% url 'account_logout' %}">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </p>
+        {% else %}
+        <p class="text-end m-3">
+            <a href="{% url 'account_login' %}">
+                <i class="fa-solid fa-user-xmark"></i>
+            </a>
+        </p>
+        {% endif %}
+      </div>
     </div>
   </nav>
+  <div class="logo-img">
+    <img src="{% static 'images/small-logo.png' %}" alt="Handbook for burnout logo" class="img-fluid d-sm-none" aria-label="Logo for Handbook for burnout">
+    <img src="{% static 'images/logo.png' %}" alt="Handbook for burnout logo" class="img-fluid d-none d-sm-block" aria-label="Logo for Handbook for burnout">
+  </div>
 </header>
