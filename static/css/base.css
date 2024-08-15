@@ -17,6 +17,10 @@ main {
   margin-bottom: 10px;
 }
 
+.active {
+  font-weight: bold;
+}
+
 .heading {
   font-family: Garamond, serif;
   font-size: 3rem;
