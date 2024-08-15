@@ -141,6 +141,10 @@ ul {
   opacity: 0.8;
 }
 
+.darker-p {
+  color: black;
+}
+
 .alert {
   opacity: 0.7;
 }
