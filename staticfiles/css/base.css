@@ -178,12 +178,12 @@ ul {
   padding: 20px 5px 0 10px;
 }
 
-.ext-link-div {
+.rev-link-div {
   display: flex;
   justify-content: flex-end;
 }
 
-a.ext-link {
+a.rev-link {
     background-color: var(--light-pink);
     border-color: var(--light-pink);
     color: black;
@@ -193,11 +193,21 @@ a.ext-link {
 }
 
 .activity-link {
-  display: inline-block;
-  text-overflow: ellipsis;
-  width: 20em;
-  white-space: nowrap;
-  overflow: hidden;
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+
+.fa-solid.fa-arrow-up-right-from-square {
+  color: var(--dark-grey);
+  cursor: pointer;
+  font-size: large;
+  padding-right: 30px;
+  text-decoration: none;
+}
+
+.fa-solid.fa-arrow-up-right-from-square:hover,
+.activity-link:hover {
+  color: var(--hover-pink);
 }
 
 .previous-btn {
