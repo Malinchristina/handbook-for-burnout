@@ -17,6 +17,10 @@ main {
   margin-bottom: 10px;
 }
 
+.active {
+  font-weight: bold;
+}
+
 .heading {
   font-family: Garamond, serif;
   font-size: 3rem;
@@ -78,7 +82,7 @@ ul {
   display: flex;
   justify-content: center;
   background-color: var(--square-blue);
-  width: 396px;
+  width: 385px;
   opacity: 0.8;
 }
 
@@ -92,6 +96,11 @@ ul {
   background-color: var(--square-beige);
   border-radius: 12px;
   padding: 20px;
+}
+
+.message-center {
+  display: flex;
+  justify-content: center;
 }
 
 /* index */
@@ -135,6 +144,10 @@ ul {
 
 .level-list {
   opacity: 0.8;
+}
+
+.darker-p {
+  color: black;
 }
 
 .alert {
