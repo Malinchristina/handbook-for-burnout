@@ -20,7 +20,7 @@
         <form method="post" class="mb-4">
             {% csrf_token %}
             <div class="mb-3">
-                {{ form.comment|as_crispy_field }}
+                {{ form | crispy}}
             </div>
             <input type="hidden" name="activity_pk" value="{{ activity.pk }}">
             <button type="submit" class="btn btn-primary">Submit</button>

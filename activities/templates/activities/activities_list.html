@@ -10,7 +10,7 @@
         {% endif %} 
         <p><strong>{{ activity.get_level_display }}</strong></p>
         <div class="rev-link-div">
-            <a class="rev-link" href="{% url 'reviews' activity.pk %}">Reviews ({{ activity.reviews.count }}) 
+            <a class="rev-link" href="{% url 'activity_reviews' activity.pk %}">Reviews ({{ activity.reviews.count }}) 
             </a>
         </div>
         {% if user.is_authenticated and user.is_staff %}
