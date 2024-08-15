@@ -62,7 +62,11 @@
     </div>
   </nav>
   <div class="logo-img">
-    <img src="{% static 'images/small-logo.png' %}" alt="Handbook for burnout logo" class="img-fluid d-sm-none" aria-label="Logo for Handbook for burnout">
-    <img src="{% static 'images/logo.png' %}" alt="Handbook for burnout logo" class="img-fluid d-none d-sm-block" aria-label="Logo for Handbook for burnout">
-  </div>
+    <a href="{% url 'home' %}">
+      <img src="{% static 'images/small-logo.png' %}" alt="Handbook for burnout logo" class="img-fluid d-sm-none" aria-label="Logo for Handbook for burnout">
+    </a>
+    <a href="{% url 'home' %}">
+      <img src="{% static 'images/logo.png' %}" alt="Handbook for burnout logo" class="img-fluid d-none d-sm-block" aria-label="Logo for Handbook for burnout">
+    </a>
+    </div>
 </header>
