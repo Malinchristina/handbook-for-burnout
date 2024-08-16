@@ -20,7 +20,7 @@ def not_staff_or_superuser(request):
 
 class ActivitiesView(ListView):
     model = AddActivity
-    template_name = 'activities/activities.html'
+    template_name = 'activities/activities_list.html'
     context_object_name = 'activities'
     ordering = ['-date_posted']
     paginate_by = 5
@@ -30,7 +30,10 @@ class AddActivityView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = AddActivity
     form_class = AddActivityForm
     template_name = 'activities/add_activity.html'
-    success_url = reverse_lazy('activities:activities')
+
+
+    def get_success_url(self):
+        return reverse_lazy('categories')
 
     def test_func(self):
         return is_staff_or_superuser(self.request.user)
@@ -48,7 +51,9 @@ class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = AddActivity
     form_class = AddActivityForm
     template_name = 'activities/edit_activity.html'
-    success_url = reverse_lazy('activities:activities')
+
+    def get_success_url(self):
+        return reverse_lazy('categories')
 
     def test_func(self):
         return is_staff_or_superuser(self.request.user)
@@ -58,14 +63,18 @@ class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        messages.success(self.request, 'Activity Updated Successfully')
+        #messages.success(self.request, 'Activity Updated Successfully')
         return super().form_valid(form)
+
+    def form_invalid(self, form):
+        messages.error(self.request, 'There was an error updating the activity')
+        return redirect('categories')
 
 
 class DeleteActivityView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = AddActivity
-    template_name = 'activities/delete_activity.html'
-    success_url = reverse_lazy('activities:activities')
+    #template_name = 'activities/delete_activity.html'
+    success_url = reverse_lazy('categories')
 
     def test_func(self):
         return is_staff_or_superuser(self.request.user)
