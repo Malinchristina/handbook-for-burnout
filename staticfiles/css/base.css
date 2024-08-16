@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
 
+/* Asterisk wildcard selector to overide deafult styles added by the browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --square-blue: #C4E0EB;
   --square-beige: #F5EFE8;
@@ -36,12 +43,15 @@ h2.heading {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: Roboto, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   color: var(--dark-grey);
   background-color: var(--bg-color);
   margin-bottom: 40px;
+  min-height: 100vh;
 }
 
 .fa-solid.fa-user-xmark,
@@ -105,14 +115,6 @@ ul {
 
 /* index */
 
-#heading {
-  font-family: Garamond, serif;
-  font-size: 3rem;
-  font-weight: bold;
-  color: var(--dark-grey);
-  text-align: center;
-}
-
 .logo-img {
   display: flex;
   align-items: center;
@@ -124,14 +126,6 @@ ul {
   max-width: 100%;
   height: 14vh;
   object-fit: contain;
-}
-
-#welcome-heading {
-  font-family: Garamond, serif;
-  font-size: 3rem;
-  font-weight: 500;
-  color: var(--dark-grey);
-  text-align: center;
 }
 
 .background-container {
@@ -175,7 +169,7 @@ ul {
 }
 
 .activity-p {
-  padding: 20px 5px 0 10px;
+  padding: 20px 20px 0 20px;
 }
 
 .rev-link-div {
@@ -294,9 +288,7 @@ a.rev-link {
   .color-background,
   .color-background-light {
     width: 580px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 0 auto;
   }
 
   /* index */

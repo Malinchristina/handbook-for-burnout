@@ -4,9 +4,10 @@ function ToEditActivity(button) {
 }
 
 function ToDeleteActivity(button) {
-    const url = button.getAttribute('data-delete-url');
-    const deleteConfirm = document.getElementById('deleteConfirm');
-    deleteConfirm.setAttribute('href', url);
-    const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+    const deleteUrl = button.getAttribute('data-delete-url');
+    const deleteForm = document.getElementById('delete-form');
+    deleteForm.action = deleteUrl;
+    const deleteModal = new bootstrap.Modal(document.getElementById(
+        'deleteModal'));
     deleteModal.show();
 }
