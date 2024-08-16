@@ -11,6 +11,3 @@ class Review(admin.ModelAdmin):
     list_display = ('activity_pk', 'author', 'comment', 'created_on')
     search_fields = ['activity_pk']
     readonly_fields = ('activity_pk', 'created_on')
-   
-
-

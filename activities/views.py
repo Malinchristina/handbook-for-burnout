@@ -2,7 +2,8 @@ from django.db.models import Count
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import (ListView, DetailView, CreateView,
+                                  UpdateView, DeleteView)
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .forms import AddActivityForm
@@ -31,7 +32,6 @@ class AddActivityView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     form_class = AddActivityForm
     template_name = 'activities/add_activity.html'
 
-
     def get_success_url(self):
         return reverse_lazy('categories')
 
@@ -46,11 +46,10 @@ class AddActivityView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         messages.success(self.request, 'Activity Added Successfully')
         return super().form_valid(form)
 
-    
+
 class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = AddActivity
     form_class = AddActivityForm
-    template_name = 'activities/edit_activity.html'
 
     def get_success_url(self):
         return reverse_lazy('categories')
@@ -63,17 +62,17 @@ class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         form.instance.author = self.request.user
-        #messages.success(self.request, 'Activity Updated Successfully')
+        messages.success(self.request, 'Activity Updated Successfully')
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        messages.error(self.request, 'There was an error updating the activity')
+        messages.error(self.request,
+                       'There was an error updating the activity')
         return redirect('categories')
 
 
 class DeleteActivityView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = AddActivity
-    #template_name = 'activities/delete_activity.html'
     success_url = reverse_lazy('categories')
 
     def test_func(self):
