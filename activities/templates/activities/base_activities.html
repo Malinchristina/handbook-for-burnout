@@ -23,7 +23,10 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+          <form id="delete-form" method="post" action="#">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </form>
         </div>
       </div>
     </div>
