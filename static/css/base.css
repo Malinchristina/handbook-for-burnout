@@ -288,9 +288,7 @@ a.rev-link {
   .color-background,
   .color-background-light {
     width: 580px;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    margin: 0 auto;
   }
 
   /* index */
