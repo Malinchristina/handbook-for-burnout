@@ -1,29 +1,32 @@
-<ul>
-    {% for activity in activities %}
-    <li>
-        <h3 class="activity_name">{{ activity.activity_name }}</h3> 
-        <p>{{ activity.description }}</p>
-        {% if activity.url_link %}
-        <p><a href="{{ activity.url_link }}" class="activity-link" target="_blank"> Read more &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </a>
-        </p> 
-        {% endif %} 
-        <p><strong>{{ activity.get_level_display }}</strong></p>
-        <div class="rev-link-div">
-            <a class="rev-link" href="{% url 'activity_reviews' activity.pk %}">Reviews ({{ activity.reviews.count }}) 
-            </a>
-        </div>
-        {% if user.is_authenticated and user.is_staff %}
-        <p>
-            <button class="btn btn-primary" data-edit-url="{% url 'edit_activity' activity.pk %}" onclick="ToEditActivity(this)">Edit</button>
-        </p>
-        <p>
-            <button class="btn btn-danger" data-delete-url="{% url 'delete_activity' activity.pk %}" onclick="ToDeleteActivity(this)">Delete</button>
-        </p>
-        {% endif %}
-        <hr>
-    </li>
-    {% empty %}
-    <li>No routines found.</li>
-    {% endfor %}
-</ul>
+
+<div class="container mt-4">
+    <ul>
+        {% for activity in activities %}
+        <li>
+            <h3 class="activity_name">{{ activity.activity_name }}</h3> 
+            <p>{{ activity.description }}</p>
+            {% if activity.url_link %}
+            <p><a href="{{ activity.url_link }}" class="activity-link" target="_blank"> Read more &nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </p> 
+            {% endif %} 
+            <p><strong>{{ activity.get_level_display }}</strong></p>
+            <div class="rev-link-div">
+                <a class="rev-link" href="{% url 'activity_reviews' activity.pk %}">Reviews ({{ activity.reviews.count }}) 
+                </a>
+            </div>
+            {% if user.is_authenticated and user.is_staff %}
+            <p>
+                <button class="btn btn-primary" data-edit-url="{% url 'edit_activity' activity.pk %}" onclick="ToEditActivity(this)">Edit</button>
+            </p>
+            <p>
+                <button class="btn btn-danger" data-delete-url="{% url 'delete_activity' activity.pk %}" onclick="ToDeleteActivity(this)">Delete</button>
+            </p>
+            {% endif %}
+            <hr>
+        </li>
+        {% empty %}
+        <li>No routines found.</li>
+        {% endfor %}
+    </ul>
+</div>

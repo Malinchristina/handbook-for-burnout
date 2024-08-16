@@ -3,8 +3,8 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <div class="container mt-5">
-        <h1 class="mb-4">Reviews for {{ activity_name }}</h1>
+    <div class="container mt-4">
+        <h2 class="heading text-center">Reviews for {{ activity_name }}</h2>
         <ul class="list-group">
             {% for review in reviews %}
                 <li class="list-group-item">
@@ -24,6 +24,7 @@
             </div>
             <input type="hidden" name="activity_pk" value="{{ activity.pk }}">
             <button type="submit" class="btn btn-primary">Submit</button>
+            <input class="btn btn-danger" type="button" value="Cancel" onClick="javascript:history.go(-1);">
         </form>
         <!-- Button previous page -->
         <div class="previous-div">
