@@ -27,7 +27,7 @@ def add_review(request, activity_pk):
 
             review = Review.objects.create(
                 comment=comment,
-                activity=activity,
+                activity_pk=activity,
                 author=author
             )
 
@@ -52,11 +52,17 @@ class ReviewsView(ListView):
     ordering = ['-created_on']
     paginate_by = 5
 
+    def get_queryset(self):
+        activity_pk = self.kwargs.get('pk')
+        activity = get_object_or_404(AddActivity, pk=activity_pk)
+        return Review.objects.filter(activity_pk=activity)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         activity_pk = self.kwargs.get('pk')
         activity = get_object_or_404(AddActivity, pk=activity_pk)
         form = ReviewForm()
+        context['activity_name'] = activity.activity_name
         context['activity'] = activity
         context['form'] = form
         return context
@@ -83,7 +89,9 @@ class EditReview(UserPassesTestMixin, UpdateView):
     model = Review
     form_class = ReviewForm
     template_name = 'reviews/edit_reviews.html'
-    success_url = reverse_lazy('reviews/reviews.html')
+
+    def get_success_url(self):
+        return reverse_lazy('activity_reviews', kwargs={'pk': self.object.activity_pk.pk})
 
     def test_func(self):
         review = self.get_object()
@@ -92,7 +100,7 @@ class EditReview(UserPassesTestMixin, UpdateView):
     def form_valid(self, form):
         form.save()
         messages.success(self.request, 'Your review was successfully updated.')
-        return redirect('activity_reviews', pk=activity_pk)
+        return redirect('activity_reviews', pk=activity_pk.pk)
 
     def form_invalid(self, form):
         messages.error(self.request,
@@ -106,7 +114,9 @@ class EditReview(UserPassesTestMixin, UpdateView):
 class DeleteReview(UserPassesTestMixin, DeleteView):
     model = Review
     template_name = 'reviews/delete_review.html'
-    success_url = reverse_lazy('reviews/reviews.html')
+
+    def get_success_url(self):
+        return reverse_lazy('activity_reviews', kwargs={'pk': self.object.activity_pk.pk})
 
     def test_func(self):
         review = self.get_object()
