@@ -50,6 +50,7 @@ class AddActivityView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
 class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = AddActivity
     form_class = AddActivityForm
+    template_name = 'activities/edit_activity.html'
 
     def get_success_url(self):
         return reverse_lazy('categories')
