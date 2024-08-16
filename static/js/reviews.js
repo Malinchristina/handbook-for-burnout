@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     var deleteModal = document.getElementById('deleteModal');
-    var deleteForm = document.getElementById('deleteForm');
+    var deleteForm = document.getElementById('delete-form');
 
     // Show the delete modal when the delete button is clicked
     deleteModal.addEventListener('show.bs.modal', function (event) {
