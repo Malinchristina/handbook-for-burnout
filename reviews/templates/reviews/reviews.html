@@ -5,6 +5,13 @@
 {% block content %}
     <div class="container mt-4">
         <h2 class="heading text-center">Reviews for {{ activity_name }}</h2>
+        {% if messages %}
+            <div class="alert alert-success">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
         <ul class="list-group">
             {% for review in reviews %}
                 <li class="list-group-item">
@@ -27,7 +34,7 @@
         </form>
         <!-- Button previous page -->
         <div class="previous-div">
-            <input class="btn btn-primary previous-btn" type="button" id="back-one-page" value="Previous page" onClick="javascript:history.go(-1);">
+            <a href="{% url 'categories' %}" class="btn btn-primary previous-btn">Back to Categories</a>
         </div>
     </div>
     <!-- Delete confirmation modal -->
