@@ -5,26 +5,17 @@
 {% block content %}
     <div class="container mt-4">
         <h2 class="heading text-center">Reviews for {{ activity_name }}</h2>
-        {% if messages %}
-            <div class="alert alert-success">
-                {% for message in messages %}
-                    {{ message }}
-                {% endfor %}
-            </div>
-        {% endif %}
         <ul class="list-group">
             {% for review in reviews %}
                 <li class="list-group-item">
                     <strong>{{ review.author }}</strong>: {{ review.comment }}
                     <span class="text-muted float-end">{{ review.created_on|date:"F j, Y" }}</span>
-                    {% if review.author == request.user %}
-                    <a href="{% url 'edit_review' review.pk %}" class="btn btn-sm btn-primary">Edit</a>
-                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'delete_review' review.pk %}">Delete</button>
-                    {% endif %}
+                    
                 </li>
             {% endfor %}
         </ul>
-        <form method="post" class="mb-4">
+        <!-- Add review form -->
+        <form method="post" action="{% url 'add_review' activity.pk %}" class="mb-4">
             {% csrf_token %}
             <div class="mb-3">
                 {{ form | crispy}}
