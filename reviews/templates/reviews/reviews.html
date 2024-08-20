@@ -10,7 +10,10 @@
                 <li class="list-group-item">
                     <strong>{{ review.author }}</strong>: {{ review.comment }}
                     <span class="text-muted float-end">{{ review.created_on|date:"F j, Y" }}</span>
-                    
+                    {% if review.author == request.user %}
+                        <a href="{% url 'edit_review' activity.pk review.pk %}" class="btn btn-sm btn-primary">Edit</a>
+                        
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>
