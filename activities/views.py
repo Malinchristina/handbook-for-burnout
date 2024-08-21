@@ -2,6 +2,7 @@ from django.db.models import Count
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 from django.views.generic import (ListView, DetailView, CreateView,
                                   UpdateView, DeleteView)
 from django.contrib import messages
@@ -72,19 +73,15 @@ class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         return redirect('categories')
 
 
-class DeleteActivityView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = AddActivity
-    success_url = reverse_lazy('categories')
-
-    def test_func(self):
-        return is_staff_or_superuser(self.request.user)
-
-    def handle_no_permission(self):
-        return not_staff_or_superuser(self.request)
-
-    def delete(self, request, *args, **kwargs):
-        messages.success(self.request, 'Activity Deleted Successfully')
-        return super().delete(request, *args, **kwargs)
+@login_required()
+def DeleteActivityView(request, pk):
+    activity = AddActivity.objects.get(pk=pk)
+    if is_staff_or_superuser(request.user):
+        activity.delete()
+        messages.success(request, 'Activity Deleted Successfully')
+    else:
+        return not_staff_or_superuser(request)
+    return redirect('categories')
 
 
 def routines_view(request):
