@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 from django.views.generic import (ListView, DetailView, CreateView,
                                   UpdateView, DeleteView)
 from django.contrib import messages
@@ -69,33 +70,6 @@ class AddReview(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         context['activity'] = activity
         return context
 
-    
-# class EditReview(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-#     model = Review
-#     form_class = ReviewForm
-#     template_name = 'reviews/edit_reviews.html'
-
-#     def test_func(self):
-#         return self.request.user.is_authenticated
-
-#     def form_valid(self, form):
-#         form.instance.author = self.request.user
-#         messages.success(self.request, 'Review Updated Successfully')
-#         return super().form_valid(form)
-
-#     def get_success_url(self):
-#         return reverse_lazy('activity_reviews', kwargs={'pk': self.kwargs['pk']})
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         activity_pk = self.kwargs.get('pk')
-#         activity = get_object_or_404(AddActivity, pk=activity_pk)
-#         context['activity_name'] = activity.activity_name
-#         context['activity_pk'] = activity_pk
-#         context['activity'] = activity
-#         context['form'] = self.get_form()
-#         return context
-
 
 class EditReview(UserPassesTestMixin, UpdateView):
     model = Review
@@ -123,4 +97,33 @@ class EditReview(UserPassesTestMixin, UpdateView):
 
     def handle_no_permission(self):
         return redirect('not_authorized')
-    
+
+
+# class DeleteReview(UserPassesTestMixin, DeleteView):
+#     model = Review
+
+#     def get_success_url(self):
+#         return reverse('activity_reviews', kwargs={
+#             'pk': self.object.activity_pk.pk})
+
+#     def test_func(self):
+#         review = self.get_object()
+#         return self.request.user == review.author
+
+#     def handle_no_permission(self):
+#         return redirect('not_authorized')
+
+#     def delete(self, request, *args, **kwargs):
+#         messages.success(self.request,
+#                          'Your review was successfully deleted.')
+#         return super().delete(request, *args, **kwargs)
+
+@login_required
+def deleteReview(request, pk):
+    review = Review.objects.get(pk=pk)
+    if request.user == review.author:
+        review.delete()
+        messages.success(request, 'Review Deleted Successfully')
+    else:
+        return handle_no_permission(request)
+    return redirect('activity_reviews', pk=review.activity_pk.pk)

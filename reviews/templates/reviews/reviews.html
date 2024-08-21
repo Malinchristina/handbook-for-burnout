@@ -12,7 +12,7 @@
                     <span class="text-muted float-end">{{ review.created_on|date:"F j, Y" }}</span>
                     {% if review.author == request.user %}
                         <a href="{% url 'edit_review' activity.pk review.pk %}" class="btn btn-sm btn-primary">Edit</a>
-                        
+                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal" data-delete-url="{% url 'delete_review' review.pk %}">Delete</button>
                     {% endif %}
                 </li>
             {% endfor %}
@@ -26,7 +26,7 @@
             <input type="hidden" name="activity_pk" value="{{ activity.pk }}">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        <!-- Button previous page -->
+        <!-- Button categories page -->
         <div class="previous-div">
             <a href="{% url 'categories' %}" class="btn btn-primary previous-btn">Back to Categories</a>
         </div>

@@ -3,7 +3,7 @@ from .views import (
      ReviewsView,
      AddReview,
      EditReview,
-
+     deleteReview,
 )
 
 
@@ -14,5 +14,6 @@ urlpatterns = [
           name='add_review'),
      path('activity/<int:activity_pk>/edit_review/<int:pk>/',
           EditReview.as_view(), name='edit_review'),
-    
+     path('delete_review/<int:pk>/', deleteReview,
+         name='delete_review'),
 ]
