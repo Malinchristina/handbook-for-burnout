@@ -40,7 +40,7 @@ class ReviewsView(LoginRequiredMixin, ListView):
         context['form'] = form
         return context
 
-    
+
 class AddReview(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Review
     form_class = ReviewForm
@@ -59,7 +59,8 @@ class AddReview(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse_lazy('activity_reviews', kwargs={'pk': self.kwargs['pk']})
+        return reverse_lazy('activity_reviews', kwargs={
+            'pk': self.kwargs['pk']})
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -87,36 +88,17 @@ class EditReview(UserPassesTestMixin, UpdateView):
     def form_valid(self, form):
         self.object = form.save()
         messages.success(
-        self.request, 'Your review was successfully updated.')
+            self.request, 'Your review was successfully updated.')
         return redirect(self.get_success_url())
 
     def form_invalid(self, form):
         messages.error(self.request,
-        'There was an error updating your review.')
+                       'There was an error updating your review.')
         return self.render_to_response(self.get_context_data(form=form))
 
     def handle_no_permission(self):
         return redirect('not_authorized')
 
-
-# class DeleteReview(UserPassesTestMixin, DeleteView):
-#     model = Review
-
-#     def get_success_url(self):
-#         return reverse('activity_reviews', kwargs={
-#             'pk': self.object.activity_pk.pk})
-
-#     def test_func(self):
-#         review = self.get_object()
-#         return self.request.user == review.author
-
-#     def handle_no_permission(self):
-#         return redirect('not_authorized')
-
-#     def delete(self, request, *args, **kwargs):
-#         messages.success(self.request,
-#                          'Your review was successfully deleted.')
-#         return super().delete(request, *args, **kwargs)
 
 @login_required
 def deleteReview(request, pk):
