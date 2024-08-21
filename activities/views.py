@@ -74,7 +74,7 @@ class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 @login_required()
-def DeleteActivityView(request, pk):
+def deleteActivityView(request, pk):
     activity = AddActivity.objects.get(pk=pk)
     if is_staff_or_superuser(request.user):
         activity.delete()
