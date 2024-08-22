@@ -30,6 +30,7 @@ Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57
   - [Register](#register)
   - [Login](#login)
   - [Logout](#logout)
+  - [Future Features](#future-features)
 - [Project Planning](#project-planning)
   - [Wireframes](#wireframes)
     - [Mobile](#mobile)
@@ -54,8 +55,6 @@ Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57
 - [Deployment](#deployment)
   - [GitHub](#github)
   - [Heroku](#heroku)
-- [Features](#features-1)
-  - [Future Features](#future-features)
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
@@ -120,7 +119,9 @@ The Activities page displays a list of activities, categorized by their energy l
 
 For superusers and staff users, edit and delete buttons are visible, allowing them to manage the activities.
 
- <details><summary>Click to view the images</summary><p align="center"><img src="documentation/readme_photos/activity_1.png" alt="Activity 1" width="45%"><img src="documentation/readme_photos/activity_2.png" alt="Activity 2" width="45%"></p>
+ <details><summary>Click to view the images</summary>
+<p align="center"><img src="documentation/readme_photos/activity_1.png" alt="Activity 1" width="60%"></p>
+<p align="center"><img src="documentation/readme_photos/activity_2.png" alt="Activity 2" width="60%"></p>
 </details>
 
 ### Reviews
@@ -165,6 +166,17 @@ Signs users out of their account, providing a secure exit from the app.
 
 <details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/logout.png" alt="Logout" width="60%"></p>
 </details>
+
+## Future features
+
+- In the future, it would be ideal to manage categories directly from the app, allowing for easy addition and deletion.
+
+- The ERD includes a model for users, which is planned as a future feature. This will enable users to have an account page where they can view their contributions.
+
+- One EPIC feature that didn't make it into production is [Analytics and Reporting](https://github.com/users/Malinchristina/projects/3/views/1?pane=issue&itemId=66415565). This feature would be valuable for tracking user contributions and identifying the most viewed content.
+
+
+All future features are specified under Future Feature in the [project board](https://github.com/users/Malinchristina/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D). 
 
 ## Project planning
 
@@ -269,25 +281,47 @@ MoSCoW prioritization is used in this project to classify features into four cat
 
 [Testing](testing.md) 
 
-### Deployment
+## Deployment
 
-#### GitHub
+The app was created in Visual Studio Code editor desktop app.
 
-#### Heroku
+### GitHub
 
-### Features
+The repository was created and stored on GitHub. Any changes made in VS Code was done with the commands.
+ - git add .
+ - git commit -m "Commit message"
+ - git push
 
-#### Future features
+ Branches were created to maintain a clear separation between stable, fully functional code and experimental or trial code. The branching strategy and commands used were adapted from lessons learned during the May Hackathon and the project [RemindiCare](https://github.com/JohnnySonTrinh/remindicare/blob/main/CONTRIBUTING.md). 
 
-All future features are specified under Future Feature in the [project board](https://github.com/users/Malinchristina/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D). There is one EPIC that did not make production at all.
 
-- [Analytics and Reporting](https://github.com/users/Malinchristina/projects/3/views/1?pane=issue&itemId=66415565)
+### Heroku
+
+The steps to deploy in Heroku:
+
+1. Log in to Heroku
+2. Create new app 
+3. In settings press Reveal Config Vars and add:
+    - DATABASE_URL
+    - SECRET_KEY
+4. Scroll down to add buildpack heroku/python
+5. In Deploy connect to GitHub and find the repository
+6. Scroll down and connect, in this case, manually on Deploy Branch.
+7. Click open app to view the deployed app
+
+<details><summary>Click to view Heroku deployment images</summary><p align="center">
+    <img src="documentation/readme_photos/heroku_1.png" alt="Heroku Step 1" width="60%">
+    <img src="documentation/readme_photos/heroku_2.png" alt="Heroku Step 2" width="60%">
+    <img src="documentation/readme_photos/heroku_3.png" alt="Heroku Step 3" width="60%">
+  </p>
+</details>
+
 
 ### Credits
 
 #### Code
 
-**Boostrap**
+**Bootstrap**
 
 [Bootstrap](https://getbootstrap.com/) was used in this project to create a responsive and consistent design, leveraging its built-in components for efficient layout management.
 
