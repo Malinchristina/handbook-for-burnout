@@ -14,8 +14,6 @@ To foster a sense of community and ensure a safe, interactive space, users must 
 Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57b49adf.herokuapp.com/) on Heroku.
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Deployed Site](#deployed-site)
 - [User Experience (UX)](#user-experience-ux)
   - [Design Thinking](#design-thinking)
     - [Mobile First](#mobile-first)
@@ -23,6 +21,15 @@ Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57
     - [Colors](#colors)
     - [Typography](#typography)
 - [Features](#features)
+  - [Index / Home](#index--home)
+  - [Categories](#categories)
+  - [Activity Pages](#activity-pages)
+  - [Reviews](#reviews)
+  - [About](#about)
+  - [Add Activities](#add-activities)
+  - [Register](#register)
+  - [Login](#login)
+  - [Logout](#logout)
 - [Project Planning](#project-planning)
   - [Wireframes](#wireframes)
     - [Mobile](#mobile)
@@ -30,9 +37,9 @@ Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57
   - [Database Schema - Entity Relationship Diagram](#database-schema---entity-relationship-diagram)
   - [Models](#models)
     - [User](#user)
-    - [Categories](#categories)
+    - [Categories](#categories-1)
     - [Activities](#activities)
-    - [Reviews](#reviews)
+    - [Reviews](#reviews-1)
 - [Agile Methodologies](#agile-methodologies)
   - [Kanban Board](#kanban-board)
   - [Epics](#epics)
@@ -47,14 +54,12 @@ Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57
 - [Deployment](#deployment)
   - [GitHub](#github)
   - [Heroku](#heroku)
-- [Features](#features)
+- [Features](#features-1)
   - [Future Features](#future-features)
-    - [Analytics and Reporting](#analytics-and-reporting)
 - [Credits](#credits)
   - [Code](#code)
   - [Media](#media)
-  - [Acknowledgements](#acknowledgements)
-
+- [Acknowledgements](#acknowledgements)
     
 
 ## User Experience (UX)
@@ -169,13 +174,12 @@ Balsamiq was utilized to craft detailed wireframes that visually represented the
 
 #### Mobile
 
-<p align="center"><img src="documentation/readme_photos/mobile_index.png" alt="Index" width="45%"><img src="documentation/readme_photos/mobile_index_menu.png" alt="Index Menu" width="45%"></p>
-
-<p align="center"><img src="documentation/readme_photos/mobile_activitiy.png" alt="Activity" width="45%"><img src="documentation/readme_photos/mobile_activity_menu.png" alt="Activity Menu" width="45%"></p>
+<details><summary>Click to view wireframes</summary><p align="center"><img src="documentation/readme_photos/mobile_index.png" alt="Index" width="45%"><img src="documentation/readme_photos/mobile_index_menu.png" alt="Index Menu" width="45%"></p>
+  <p align="center"><img src="documentation/readme_photos/mobile_activitiy.png" alt="Activity" width="45%"><img src="documentation/readme_photos/mobile_activity_menu.png" alt="Activity Menu" width="45%"></p></details>
 
 #### Tablet
 
-<p align="center"><img src="documentation/readme_photos/tablet.png" alt="Index" width="45%"><img src="documentation/readme_photos/tablet_activity.png" alt="Activity" width="45%"></p>
+<details><summary>Click to view wireframes</summary><p align="center"><img src="documentation/readme_photos/tablet.png" alt="Index" width="45%"><img src="documentation/readme_photos/tablet_activity.png" alt="Activity" width="45%"></p></details>
 
 ### Database Schema - Entity Relationship Diagram
 
