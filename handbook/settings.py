@@ -173,7 +173,6 @@ MESSAGE_TAGS = {
     message_constants.ERROR: 'alert-danger',
 }
 
-X_FRAME_OPTIONS = 'ALLOWALL'
 
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
