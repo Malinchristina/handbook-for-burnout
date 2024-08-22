@@ -262,7 +262,7 @@ View all user storys [here](https://github.com/users/Malinchristina/projects/3).
 
 MoSCoW prioritization is used in this project to classify features into four categories: Must have, Should have, Could have, and Won't have. This approach helps ensure that critical features are delivered first, while less essential ones are prioritized accordingly, streamlining the development process.
 
-### Technologies Used
+## Technologies Used
 
 #### Languages
 
@@ -273,13 +273,41 @@ MoSCoW prioritization is used in this project to classify features into four cat
 
 #### Frameworks
 
-#### Libraries
+- Django: A Python framework utilized for building and managing the web application.
+- Bootstrap 5: A CSS framework employed for styling and ensuring a responsive design.
+
+#### Libraries & Packages
+
+- crispy-bootstrap5: Integrates Bootstrap 5 with Django forms for enhanced styling.
+- dj-database-url: Configures Django database settings from a database URL.
+- django-allauth: Handles authentication and account registration in Django.
+- django-crispy-forms: Simplifies the rendering of Django forms.
+- gunicorn: A WSGI HTTP server for UNIX, often used to serve Django applications.
+- psycopg2: PostgreSQL adapter for Python, used for interacting with PostgreSQL databases.
 
 #### Tools & Programs
 
+- VSCode
+- Github Pages
+- Github Kanban Board
+- Code Institute Postgres database
+- Chrome Dev tools
+- Lucidchart to create the database schema
+- Balsamiq to create wireframes
+- Heroku for app deployment
+- PEP8 to check PEP8 requirements
+- HTML Validator
+- W3 CSS Validator
+- JShint
+- Convertio to convert img from jpeg/png to webp
+- Pexels to get images for the app
+- ChatGPT for texts
+- Favicon.io for favicon
+- Fontawesome for icons
+
 ### Testing
 
-[Testing](testing.md) 
+Find detailed at [Testing](testing.md) 
 
 ## Deployment
 
@@ -317,19 +345,19 @@ The steps to deploy in Heroku:
 </details>
 
 
-### Credits
+## Credits
 
-#### Code
+### Code
 
-**Bootstrap**
+#### Bootstrap
 
 [Bootstrap](https://getbootstrap.com/) was used in this project to create a responsive and consistent design, leveraging its built-in components for efficient layout management.
 
-**Django**
+#### Django
 
 [Django](https://docs.djangoproject.com/en/5.0/) was used in this project as the primary web framework, providing robust tools for rapid development, secure authentication, and a scalable structure to handle both front-end and back-end needs.
 
-**Allauth**
+#### Allauth
 
 [Django Allauth](https://docs.allauth.org/en/latest/account/configuration.html) was used in this project to handle user authentication, specifically providing seamless email verification during the registration process to ensure secure account creation and management.
 
@@ -358,4 +386,5 @@ Logo was created by me in [Canva](https://www.canva.com).
 - Thanks to the swedish community in Slack for support and testing.
 - A big shoutout to Niclas Hugdahl, Emmelie Kolmodin, Jörgen Jonsson, Ben Gilbert and Johnny Trinh for testing, input and emotional support during the PP4 rollercoaster.
 - Thanks to my mentor Gareth McGirr for support and guidance.
+- And a big thanks for all the support from my partner.
 
