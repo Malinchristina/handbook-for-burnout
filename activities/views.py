@@ -24,7 +24,7 @@ class ActivitiesView(ListView):
     model = AddActivity
     template_name = 'activities/activities_list.html'
     context_object_name = 'activities'
-    ordering = ['-date_posted']
+    ordering = ['-created_on']
     paginate_by = 5
 
 
