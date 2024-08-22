@@ -22,6 +22,7 @@ Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57
     - [Design](#design)
     - [Colors](#colors)
     - [Typography](#typography)
+- [Features](#features)
 - [Project Planning](#project-planning)
   - [Wireframes](#wireframes)
     - [Mobile](#mobile)
@@ -91,6 +92,74 @@ EB Garamond for headings and Robot for body.
 
 ![EB Garamond](documentation/readme_photos/garamond.png)
 ![Roboto](documentation/readme_photos/roboto.png)
+
+## Features
+
+### Index / Home
+
+This page provides a brief overview of the app’s purpose and functionality. It explains how the app works and highlights that full access to the content requires user registration and login.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/index.png" alt="Index" width="60%"></p>
+</details>
+
+### Categories
+
+The page presents the four different categories. The "cards" can only be accessed if logged in.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/categories.png" alt="Categories" width="60%"></p>
+</details>
+
+### Activity pages
+
+The Activities page displays a list of activities, categorized by their energy level. Each activity entry may include links for more details. There is also a "Reviews" button, which shows the number of reviews for each activity and directs users to a page where they can read existing reviews or submit their own.
+
+For superusers and staff users, edit and delete buttons are visible, allowing them to manage the activities.
+
+ <details><summary>Click to view the images</summary><p align="center"><img src="documentation/readme_photos/activity_1.png" alt="Activity 1" width="45%"><img src="documentation/readme_photos/activity_2.png" alt="Activity 2" width="45%"></p>
+</details>
+
+### Reviews
+
+The Reviews page allows users to read reviews submitted by others and add their own feedback. If a user has created a review, they will see options to edit or delete their review. This feature helps ensure that feedback can be managed and updated as needed.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/reveiws.png" alt="Reviews" width="60%"></p>
+</details>
+
+### About
+
+The "About" page offers insight into the inspiration and purpose behind the creation of this library. It shares the personal journey of the creator, me, detailing the experiences with burnout and how these challenges led to the development of this supportive resource. The page aims to provide context for the library's existence and foster a sense of understanding and 
+community for users.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/about.png" alt="About" width="60%"></p>
+</details>
+
+### Add activites
+
+Provides a form for superusers and staff users to add new activities to the app.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/add_activity.png" alt="Add activity" width="60%"></p>
+</details>
+
+### Register
+
+This page allows users to sign up and create a new account to gain access to all the content.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/register.png" alt="Register" width="60%"></p>
+</details>
+
+### Login
+
+Allows users to access their account by logging in after account creation.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/login.png" alt="Login" width="60%"></p>
+</details>
+
+### Logout
+
+Signs users out of their account, providing a secure exit from the app.
+
+<details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/logout.png" alt="Logout" width="60%"></p>
+</details>
 
 ## Project planning
 
