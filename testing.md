@@ -1,4 +1,4 @@
-# Handbook For Burnout - testing
+# Handbook For Burnout - Testing
 
 ## Validator
 
@@ -21,6 +21,13 @@ CSS was tested with [W3C](https://jigsaw.w3.org/css-validator/validator?uri=http
 All python code was tested with [CI Python Linter](https://pep8ci.herokuapp.com/). All errors were fixed.
 
 ## Lighthouse
+
+Lighthouse was used to analyze the performance, accessibility, and SEO of the web application. 
+
+<p align="center"><img src="documentation/testing_images/index.png" alt="Index" width="45%"><img src="documentation/testing_images/categories.png" alt="Categories" width="45%"></p>
+<p align="center"><img src="documentation/testing_images/about.png" alt="About" width="45%"><img src="documentation/testing_images/add_activity.png" alt="Add activity" width="45%"></p>
+<p align="center"><img src="documentation/testing_images/routines.png" alt="Routines" width="45%"><img src="documentation/testing_images/review_list.png" alt="Review list" width="45%"></p>
+<p align="center"><img src="documentation/testing_images/login.png" alt="Login" width="45%"><img src="documentation/testing_images/logout.png" alt="Logout" width="45%"></p>
 
 ## Manual testing
 
@@ -101,10 +108,26 @@ All python code was tested with [CI Python Linter](https://pep8ci.herokuapp.com/
 | Edit | Cancel abort edit and return to reviews list. Save navigates to reviews list. Display success message for edit. | Form the action for save and cancel btn. | Sucess message is show, navigate back to list. | Pass |
 | Delete | Open modal on delete btn. Cancel abort. Delete removes the review. Stay on review list. | Form the action for cancel and delete btn. | Modal close on cancel, removal on delete, show updated list. Success message displayed. | Pass |
 
+**[To top](#handbook-for-burnout---testing)**
 
 ### Browsers
 
+#### Mobile
+
+The site is tested on various Iphones, Androids such as Xiaomi Redmi Note and Samsung.
+
 ## Bugs
+
+#### Solved bugs
+
+- "Normal" coding bugs like spelling errors in links.
+- Success messages not showing after delete.
+- Fetch databasa to shell.
+- Not accessing the activity id in the database, fetch by pk instead.
+- Many trial and error.
+- Print console.log.
+
+#### Unsolved bugs
 
 When adding activites, even though "ordering = ['-date_posted']" is used in the view, they don't always end up in the order they are posted on.
 
