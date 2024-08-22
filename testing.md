@@ -10,7 +10,7 @@
 
 CSS was tested with [W3C](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhandbook-for-burnout-4d6e57b49adf.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en). The warnings received are ones that can be overlooked.
 
-![CSS warning](docs/readme_images/CSS_W3C.png)
+![CSS warning](documentation/testing_images/CSS_W3C.png)
 
 ### JavaScript
 
