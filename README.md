@@ -1,5 +1,7 @@
 # Handbok for Burnout: Your Guide on the Recovery Journey
 
+![Mock Up](documentation/readme_photos/mockup.png)
+
 ## Introduction
 Handbok for Burnout is a supportive community app designed specifically for individuals experiencing burnout. This blog-style platform offers a curated collection of resources, including podcast recommendations, low-impact activities, meditations, and personalized routines to aid in recovery.
 
@@ -12,13 +14,14 @@ To foster a sense of community and ensure a safe, interactive space, users must 
 Follow this link to view the deployed [site](https://handbook-for-burnout-4d6e57b49adf.herokuapp.com/) on Heroku.
 
 ## Table of Contents
-## Table of Contents
-
+- [Introduction](#introduction)
+- [Deployed Site](#deployed-site)
 - [User Experience (UX)](#user-experience-ux)
   - [Design Thinking](#design-thinking)
     - [Mobile First](#mobile-first)
     - [Design](#design)
     - [Colors](#colors)
+    - [Typography](#typography)
 - [Project Planning](#project-planning)
   - [Wireframes](#wireframes)
     - [Mobile](#mobile)
@@ -79,6 +82,15 @@ The imagery used in the app was carefully chosen for its calming impression, con
 Base colors were chosen from the background image on index page at [Image Color Picker](https://imagecolorpicker.io). The rest of the colors were chosen on [Coolors](https://coolors.co).
 
 <details><summary>Color Scheme</summary><p align="left"><img src="documentation/readme_photos/hfb_coolors.png" alt="Color Scheme" width="600"></p></details>
+
+#### Typography 
+
+The fonts used in this project were retrieved from [Google Fonts](https://fonts.google.com/).
+
+EB Garamond for headings and Robot for body.
+
+![EB Garamond](documentation/readme_photos/garamond.png)
+![Roboto](documentation/readme_photos/roboto.png)
 
 ## Project planning
 
@@ -194,13 +206,49 @@ MoSCoW prioritization is used in this project to classify features into four cat
 
 #### Future features
 
-Epics
+All future features are specified under Future Feature in the [project board](https://github.com/users/Malinchristina/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Labels%22%5D). There is one EPIC that did not make production at all.
+
 - [Analytics and Reporting](https://github.com/users/Malinchristina/projects/3/views/1?pane=issue&itemId=66415565)
 
 ### Credits
 
 #### Code
 
+**Boostrap**
+
+[Bootstrap](https://getbootstrap.com/) was used in this project to create a responsive and consistent design, leveraging its built-in components for efficient layout management.
+
+**Django**
+
+[Django](https://docs.djangoproject.com/en/5.0/) was used in this project as the primary web framework, providing robust tools for rapid development, secure authentication, and a scalable structure to handle both front-end and back-end needs.
+
+**Allauth**
+
+[Django Allauth](https://docs.allauth.org/en/latest/account/configuration.html) was used in this project to handle user authentication, specifically providing seamless email verification during the registration process to ensure secure account creation and management.
+
+- Much inspiration and some code is from Code Institutes Blog walkthrough project.
+- Inspiration and learning from [Daisy McGirr Recipe Sharing Tutorial](https://www.youtube.com/@IonaFrisbee/featured).
+- [Secure views](https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_), also by Daisy.
+- Idea for password reset page from [Emmelie Kolmodin's PP4](https://github.com/Ko11e/Climb-that-wall).
+- Previous button from [Niclas Hugdahl's PP4](https://github.com/NiclO1337/pp4-banana-palace/tree/main).
+- Inspiration to delete views from [Raneem Yad's PP4](https://github.com/raneem-yad/project-portfolio-4).
+- General searches for bugs and errors throughout the project were conducted using [W3schools](https://www.w3schools.com/), [MDN webdocs](https://developer.mozilla.org/en-US/), [Geeks for Geeks](https://www.geeksforgeeks.org/) and [Stack Overflow](https://stackoverflow.com/).
+- Learn about ERD from [Lucidchart](https://help.lucid.co/hc/en-us/articles/16471565238292-Create-an-Entity-Relationship-Diagram-in-Lucidchart#export-erd).
+
+
 #### Media
 
+All content is written by me and adjusted with help of [ChatGPT](https://openai.com/chatgpt/) for better flow.
+
+All links in activities are where they say they are from.
+
+Images are from [Pexels](https://www.pexels.com/sv-se/). Images are converted by [Convertio](https://convertio.co).
+
+Logo was created by me in [Canva](https://www.canva.com).
+
 #### Acknowledgements
+
+- Thanks to the swedish community in Slack for support and testing.
+- A big shoutout to Niclas Hugdahl, Emmelie Kolmodin, Jörgen Jonsson, Ben Gilbert and Johnny Trinh for testing, input and emotional support during the PP4 rollercoaster.
+- Thanks to my mentor Gareth McGirr for support and guidance.
+
