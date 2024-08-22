@@ -8,7 +8,7 @@
         <h2 class="text-center heading heading">Categories</h2>
         {% if not user.is_authenticated %}
           <div class="alert alert-warning mt-4" role="alert">
-            <p class="text-dark">The content on each category can only be viewed if you are logged in. Do you want to <a href="{% url 'account_login' %}" class="alert-link">log in</a>?</p>
+            <p class="text-dark">The activities on each category can only be viewed if you are logged in. Do you want to <a href="{% url 'account_login' %}" class="alert-link">log in</a>?</p>
           </div>
         {% endif %}
         <!-- Grid layout with two columns on medium and larger screens -->
