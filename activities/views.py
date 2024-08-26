@@ -20,7 +20,7 @@ def not_staff_or_superuser(request):
     return render(request, '403.html')
 
 
-class ActivitiesView(ListView):
+class ActivitiesView(LoginRequiredMixin, ListView):
     model = AddActivity
     template_name = 'activities/activities_list.html'
     context_object_name = 'activities'
