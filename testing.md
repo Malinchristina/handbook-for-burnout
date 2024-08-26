@@ -1,6 +1,5 @@
 # Handbook For Burnout - Testing
 
-# Table of Contents
 
 - [Validator](#validator)
     - [HTML](#html)
