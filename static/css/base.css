@@ -63,6 +63,11 @@ body {
   text-decoration: none;
 }
 
+.user_name {
+  color: var(--dark-grey);
+  padding-right: 14px;
+}
+
 .btn {
   border-radius: 25px;
 }
