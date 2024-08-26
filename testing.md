@@ -33,6 +33,27 @@ Lighthouse was used to analyze the performance, accessibility, and SEO of the we
 
 ### User stories
 
+All user stories have been tested and function as expected according to their Acceptance Criteria.
+
+| Test case ID | User Story | Name                                               | Status | Acceptance Criteria Pass/Fail |   |
+|--------------|------------|----------------------------------------------------|--------|-------------------------------|---|
+| TC1          | US#2       | [Staff user sign up](https://github.com/users/Malinchristina/projects/3/views/1?pane=issue&itemId=65590621)                                 | Done   | Pass                          |   |
+| TC2          | US#4       | [User Sign-Up to View Activities](https://github.com/Malinchristina/handbook-for-burnout/issues/4#issue-2328626161)                    | Done   | Pass                          |   |
+| TC3          | US#7       | [Deleting Staff Users Account](https://github.com/Malinchristina/handbook-for-burnout/issues/7)                       | Done   | Pass                          |   |
+| TC4          | US#31      | [Add Staff User permission](https://github.com/Malinchristina/handbook-for-burnout/issues/31)                          | Done   | Pass                          |   |
+| TC5          | US#11      | [Create and Edit Categories](https://github.com/Malinchristina/handbook-for-burnout/issues/11)                         | Done   | Pass                          |   |
+| TC6          | US#12      | [View Categories](https://github.com/Malinchristina/handbook-for-burnout/issues/12)                                    | Done   | Pass                          |   |
+| TC7          | US#24      | [Delete categories](https://github.com/Malinchristina/handbook-for-burnout/issues/24)                                  | Done   | Pass                          |   |
+| TC8          | US#13      | [Activity Management for Site Admin and Staff Users](https://github.com/Malinchristina/handbook-for-burnout/issues/13) | Done   | Pass                          |   |
+| TC9          | US#17      | [View activities](https://github.com/Malinchristina/handbook-for-burnout/issues/17)                                    | Done   | Pass                          |   |
+| TC10         | US#18      | [Navigate to Linked Activity](https://github.com/Malinchristina/handbook-for-burnout/issues/18)                        | Done   | Pass                          |   |
+| TC11         | US#19      | [Filter Activities Category](https://github.com/Malinchristina/handbook-for-burnout/issues/19)                         | Done   | Pass                          |   |
+| TC12         | US#22      | [Site admin to manage reviews](https://github.com/Malinchristina/handbook-for-burnout/issues/22)                       | Done   | Pass                          |   |
+| TC13         | US#20      | [View Comments on Activities](https://github.com/Malinchristina/handbook-for-burnout/issues/20)                        | Done   | Pass                          |   |
+| TC14         | US#23      | [Manage Own Reviews](https://github.com/Malinchristina/handbook-for-burnout/issues/23)                                 | Done   | Pass                          |   |
+
+
+
 ### Features
 
 | Features tested | Expected outcome | Testing | Result | Pass / Fail |
