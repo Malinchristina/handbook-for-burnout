@@ -17,7 +17,7 @@
             </div>
             {% if user.is_authenticated and user.is_staff %}
             <p>
-                <button class="btn btn-primary" data-edit-url="{% url 'edit_activity' activity.pk %}" onclick="ToEditActivity(this)">Edit</button>
+                <button class="btn btn-primary" data-edit-url="{% url 'edit_activity' activity.pk %}?next={{ request.path }}" onclick="ToEditActivity(this)">Edit</button>
             </p>
             <p>
                 <button class="btn btn-danger" data-delete-url="{% url 'delete_activity' activity.pk %}" onclick="ToDeleteActivity(this)">Delete</button>

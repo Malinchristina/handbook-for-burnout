@@ -54,7 +54,8 @@ class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = 'activities/edit_activity.html'
 
     def get_success_url(self):
-        return reverse_lazy('categories')
+        next_url = self.request.GET.get('next')
+        return next_url if next_url else reverse('categories')
 
     def test_func(self):
         return is_staff_or_superuser(self.request.user)
@@ -70,7 +71,8 @@ class EditActivityView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def form_invalid(self, form):
         messages.error(self.request,
                        'There was an error updating the activity')
-        return redirect('categories')
+        next_url = self.request.GET.get('next')
+        return redirect(next_url if next_url else 'categories')
 
 
 @login_required()
@@ -81,7 +83,8 @@ def deleteActivityView(request, pk):
         messages.success(request, 'Activity Deleted Successfully')
     else:
         return not_staff_or_superuser(request)
-    return redirect('categories')
+    return HttpResponseRedirect(request.META.get(
+        'HTTP_REFERER', reverse('categories')))
 
 
 def routines_view(request):
