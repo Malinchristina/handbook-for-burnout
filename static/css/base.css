@@ -328,6 +328,47 @@ a.rev-link {
     border-radius: 2px;
   }
 
+  /* Activities */
+
+  .img_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+
+  .indoor-img {
+    flex: 1;
+    height: 24vh;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
+
+  .outdoor-img {
+    flex: 1;
+    height: 24vh;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
+
+  .podcast-img {
+    flex: 1;
+    height: 24vh;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
+
+  .routines-img {
+    flex: 1;
+    height: 24vh;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
+
+  .activity-p {
+    flex: 1;
+  }
+
   /* About */
   .about-img {
     background: url(../images/me.webp) no-repeat center center/cover;
