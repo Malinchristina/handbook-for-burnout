@@ -272,6 +272,16 @@ a.rev-link {
   margin-right: 30px;
 }
 
+/* Signout */
+
+.signout{
+  margin-right: 4px;
+}
+
+.cancel_signout{
+  margin-left: 4px;
+}
+
 /* Footer */
 
 .footer {
