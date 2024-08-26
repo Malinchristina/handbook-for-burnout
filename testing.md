@@ -52,7 +52,7 @@ All user stories have been tested and function as expected according to their Ac
 | TC13         | US#20      | [View Comments on Activities](https://github.com/Malinchristina/handbook-for-burnout/issues/20)                        | Done   | Pass                          |   |
 | TC14         | US#23      | [Manage Own Reviews](https://github.com/Malinchristina/handbook-for-burnout/issues/23)                                 | Done   | Pass                          |   |
 
-
+**[To top](#handbook-for-burnout---testing)**
 
 ### Features
 
@@ -133,6 +133,11 @@ All user stories have been tested and function as expected according to their Ac
 
 ### Browsers
 
+The application has been tested on the following browsers:
+- Chrome
+- Edge
+- Safari
+
 #### Mobile
 
 The site is tested on various Iphones, Androids such as Xiaomi Redmi Note and Samsung.
@@ -143,13 +148,12 @@ The site is tested on various Iphones, Androids such as Xiaomi Redmi Note and Sa
 
 - "Normal" coding bugs like spelling errors in links.
 - Success messages not showing after delete.
-- Fetch databasa to shell.
 - Not accessing the activity id in the database, fetch by pk instead.
 - Many trial and error.
 - Print console.log.
 
 #### Unsolved bugs
 
-When adding activites, even though "ordering = ['-date_posted']" is used in the view, they don't always end up in the order they are posted on.
+No unresolved bugs to report.
 
 
