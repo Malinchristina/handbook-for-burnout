@@ -1,5 +1,23 @@
 # Handbook For Burnout - Testing
 
+# Table of Contents
+
+- [Validator](#validator)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
+- [Lighthouse](#lighthouse)
+- [Manual Testing](#manual-testing)
+    - [User Stories](#user-stories)
+    - [Features](#features)
+    - [Browsers](#browsers)
+    - [Mobile](#mobile)
+- [Bugs](#bugs)
+    - [Solved Bugs](#solved-bugs)
+    - [Unsolved Bugs](#unsolved-bugs)
+
+[Readme](README.md)
 ## Validator
 
 ### HTML
