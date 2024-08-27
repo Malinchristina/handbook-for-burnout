@@ -169,7 +169,7 @@ Signs users out of their account, providing a secure exit from the app.
 
 ## Future features
 
-- In the future, it would be ideal to manage categories directly from the app, allowing for easy addition and deletion.
+- In the future, it would be ideal to manage categories directly from the app, allowing for easy addition and deletion. This would include a single template to iterate over the categories, using images instead of icons. The model would have fields for an image, which would be stored using Cloudinary.This approach would also be implemented in the activities app. Instead of using hardcoded templates, there would be one template that iterates over site-specific content and images.
 
 - The ERD includes a model for users, which is planned as a future feature. This will enable users to have an account page where they can view their contributions.
 
