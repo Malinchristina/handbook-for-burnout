@@ -82,6 +82,12 @@ The design of the app focuses on providing easy navigation to ensure users with 
 
 The imagery used in the app was carefully chosen for its calming impression, contributing to the overall serene atmosphere of the platform. Soft colors, where possible, gentle gradients, and peaceful visuals are employed to reduce visual noise and create a soothing environment, helping users feel at ease as they engage with the app.
 
+#### Logo
+
+The logo was created by me in [Canva](https://www.canva.com).
+
+<details><summary>Logo</summary><p align="left"><img src="documentation/readme_photos/logo.png" alt="Logo" width="300"></p></details>
+
 #### Colors
 
 Base colors were chosen from the background image on index page at [Image Color Picker](https://imagecolorpicker.io). The rest of the colors were chosen on [Coolors](https://coolors.co).
