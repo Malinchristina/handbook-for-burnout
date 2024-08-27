@@ -1,4 +1,4 @@
-# Handbok for Burnout: Your Guide on the Recovery Journey
+# Handbook for Burnout: Your Guide on the Recovery Journey
 
 ![Mock Up](documentation/readme_photos/mockup.png)
 
@@ -92,7 +92,7 @@ Base colors were chosen from the background image on index page at [Image Color 
 
 The fonts used in this project were retrieved from [Google Fonts](https://fonts.google.com/).
 
-EB Garamond for headings and Robot for body.
+EB Garamond for headings and Roboto for body.
 
 ![EB Garamond](documentation/readme_photos/garamond.png)
 ![Roboto](documentation/readme_photos/roboto.png)
@@ -139,7 +139,7 @@ community for users.
 <details><summary>Click to view the image</summary><p align="center"><img src="documentation/readme_photos/about.png" alt="About" width="60%"></p>
 </details>
 
-### Add activites
+### Add activities
 
 Provides a form for superusers and staff users to add new activities to the app.
 
@@ -217,7 +217,7 @@ The predefined categories are:
 
 These categories can only be handled by the admin user in the admin panel to ensure all activities are categorized correctly.
 
-#### Activites
+#### Activities
 
 This model is used to enter various activities and categorize them under predefined categories. Each activity is assigned to a specific level:
 - All Levels
@@ -237,7 +237,7 @@ Agile methodologies are used in this project to support iterative development an
 
 The Kanban board is used in this project to visualize and manage tasks. By organizing work into columns representing different stages (e.g., To Do, In Progress, Done), the Kanban board helps track progress and prioritize tasks efficiently.
 
-View the bord for this project [here](https://github.com/users/Malinchristina/projects/3/views/1).
+View the board for this project [here](https://github.com/users/Malinchristina/projects/3/views/1).
 
 #### Epics
 
@@ -253,7 +253,7 @@ Epics are used in this project to organize and manage large features or objectiv
 
 User stories are used in this project to define and prioritize individual features or requirements from the user's perspective. Each user story outlines a specific need or goal, guiding the development of functionality in a user-centered manner. This approach helps ensure that each task contributes to the overall project objectives and allows for iterative refinement and adjustment.
 
-View all user storys [here](https://github.com/users/Malinchristina/projects/3). 
+View all user stories [here](https://github.com/users/Malinchristina/projects/3). 
 
 <details><summary>Example of a User Story</summary> <p align="left"> <img src="./documentation/readme_photos/us.png" alt="Example of user story" width="600"></p></details>
 
